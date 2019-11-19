@@ -1,0 +1,82 @@
+name: OpenWrt K2P CI
+on:
+  release:
+    types: [created]
+jobs:
+  build:
+    runs-on: ubuntu-18.04
+    env:
+      VERSION: 18.06.5
+      URL: https://github.com/openwrt/openwrt/archive/v18.06.5.tar.gz
+    steps:
+    - name: Checkout - clone repository
+      uses: actions/checkout@v1
+    - name: Install - system build dependencies
+      run: sudo apt install subversion build-essential libncurses5-dev zlib1g-dev gawk git ccache gettext libssl-dev xsltproc zip
+    - name: Download - openwrt source download
+      run: |
+        wget $URL
+        tar -zxf v$VERSION.tar.gz
+    - name: Update - openwrt source update
+      run: |
+        cd openwrt-$VERSION
+        ./scripts/feeds update -a
+    - name: Install - openwrt source install
+      run: |
+        cd openwrt-$VERSION
+        ./scripts/feeds install -a
+    - name: Delete - delete openwrt shadowsocks
+      run: |
+        cd openwrt-$VERSION
+        rm -rf feeds/luci/applications/luci-app-shadowsocks-libev/luasrc/controller/shadowsocks-libev.lua
+        rm -rf feeds/luci/applications/luci-app-shadowsocks-libev/luasrc/model/shadowsocks-libev.lua
+        rm -rf feeds/luci/applications/luci-app-shadowsocks-libev/root/etc/uci-defaults/40_luci-shadowsocks-libev
+        rm -rf feeds/luci.tmp/info/.packageinfo-applications_luci-app-shadowsocks-libev
+        rm -rf feeds/packages/net/shadowsocks-libev/files/shadowsocks-libev.config
+        rm -rf feeds/packages/net/shadowsocks-libev/files/shadowsocks-libev.init
+        rm -rf feeds/packages.tmp/info/.packageinfo-net_shadowsocks-client
+        rm -rf feeds/packages.tmp/info/.packageinfo-net_shadowsocks-libev
+        rm -rf package/feeds/luci/luci-app-shadowsocks-libev
+        rm -rf package/feeds/packages/shadowsocks-client
+        rm -rf package/feeds/packages/shadowsocks-libev
+    - name: Clone - openwrt plugin source
+      run: |
+        cd openwrt-$VERSION
+        git clone -b openwrt-18.06 https://github.com/rosywrt/luci-theme-rosy.git package/luci-theme-rosy
+        git clone https://github.com/thisdk/k2p-openwrt-mt7615_5.0.2.0.git package/k2p-openwrt-mt7615_5.0.2.0
+        git clone https://github.com/thisdk/openwrt-vlmcsd.git package/openwrt-vlmcsd
+        git clone https://github.com/thisdk/luci-app-vlmcsd.git package/luci-app-vlmcsd
+        git clone https://github.com/thisdk/openwrt-simple-obfs.git package/openwrt-simple-obfs
+        git clone https://github.com/thisdk/openwrt-shadowsocks.git package/openwrt-shadowsocks
+        git clone https://github.com/honwen/luci-app-aliddns.git package/luci-app-aliddns
+        git clone https://github.com/honwen/openwrt-dnsmasq-extra.git package/openwrt-dnsmasq-extra
+        git clone https://github.com/honwen/luci-app-shadowsocks.git package/luci-app-shadowsocks
+        git clone https://github.com/LGA1150/openwrt-fullconenat package/fullconenat
+        git clone https://github.com/kuoruan/openwrt-frp.git package/frp
+    - name: Config - copy k2p build config
+      run: cp ./.config openwrt-$VERSION/.config
+    - name: Download - openwrt build dependencies
+      run: |
+        cd openwrt-$VERSION
+        make download -j10
+    - name: Build - make openwrt source
+      run: |
+        cd openwrt-$VERSION
+        make -j4
+    - name: Remove - delete packages files
+      run: |
+        cd openwrt-$VERSION/bin/targets/ramips/mt7621/
+        rm -rf packages/
+        ls -hl
+    - name: Release - push to release file
+      uses: softprops/action-gh-release@v1
+      if: startsWith(github.ref, 'refs/tags/')
+      with:
+        files: openwrt-${{ env.VERSION }}/bin/targets/ramips/mt7621/*
+      env:
+        GITHUB_TOKEN: ${{ secrets.RELEASES_DEPLOY_TOKEN }}
+    - name: Upload - push to artifact file
+      uses: actions/upload-artifact@v1
+      with:
+        name: openwrt-k2p
+        path: openwrt-${{ env.VERSION }}/bin/targets/ramips/mt7621/
