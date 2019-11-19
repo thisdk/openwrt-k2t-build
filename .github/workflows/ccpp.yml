@@ -54,7 +54,7 @@ jobs:
         git clone https://github.com/LGA1150/openwrt-fullconenat package/fullconenat
         git clone https://github.com/kuoruan/openwrt-frp.git package/frp
     - name: Config - copy k2p build config
-      run: cp ./.config openwrt-$VERSION/.config
+      run: cp ./.config.18.06.5.release openwrt-$VERSION/.config
     - name: Download - openwrt build dependencies
       run: |
         cd openwrt-$VERSION
