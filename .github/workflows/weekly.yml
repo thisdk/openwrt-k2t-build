@@ -1,7 +1,5 @@
 name: OpenWrt Weekly CI
-on:
-  release:
-    types: [created]
+on: [push]
 jobs:
   build:
     runs-on: ubuntu-18.04
@@ -13,7 +11,7 @@ jobs:
       uses: actions/checkout@v1
     - name: Install - system build dependencies
       run: sudo apt install subversion build-essential libncurses5-dev zlib1g-dev gawk git ccache gettext libssl-dev xsltproc zip
-    - name: Download - openwrt source download
+    - name: Clone - openwrt source clone
       run: |
         git clone -b openwrt-18.06 https://git.openwrt.org/openwrt/openwrt.git openwrt-$VERSION
     - name: Update - openwrt source update
@@ -54,13 +52,6 @@ jobs:
         cd openwrt-$VERSION/bin/targets/ramips/mt7621/
         rm -rf packages/
         ls -hl
-    - name: Release - push to release file
-      uses: softprops/action-gh-release@v1
-      if: startsWith(github.ref, 'refs/tags/')
-      with:
-        files: openwrt-${{ env.VERSION }}/bin/targets/ramips/mt7621/*
-      env:
-        GITHUB_TOKEN: ${{ secrets.RELEASES_DEPLOY_TOKEN }}
     - name: Upload - push to artifact file
       uses: actions/upload-artifact@v1
       with:
