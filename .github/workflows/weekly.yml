@@ -40,7 +40,7 @@ jobs:
         git clone https://github.com/honwen/luci-app-aliddns.git package/luci-app-aliddns
         git clone https://github.com/LGA1150/openwrt-fullconenat package/fullconenat
     - name: Config - copy k2p build config
-      run: cp ./.config.k2p openwrt-$VERSION/.config
+      run: cp ./.config.18.06.weekly openwrt-$VERSION/.config
     - name: Download - openwrt build dependencies
       run: |
         cd openwrt-$VERSION
