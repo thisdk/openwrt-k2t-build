@@ -49,15 +49,18 @@ jobs:
         git clone https://github.com/thisdk/openwrt-simple-obfs.git package/openwrt-simple-obfs
         git clone https://github.com/thisdk/openwrt-shadowsocks.git package/openwrt-shadowsocks
         git clone https://github.com/honwen/luci-app-aliddns.git package/luci-app-aliddns
-        git clone https://github.com/shadowsocks/luci-app-shadowsocks.git package/luci-app-shadowsocks
+        git clone https://github.com/honwen/openwrt-dnsmasq-extra.git package/openwrt-dnsmasq-extra
+        git clone https://github.com/honwen/luci-app-shadowsocks.git package/luci-app-shadowsocks
         git clone https://github.com/LGA1150/openwrt-fullconenat package/fullconenat
+        git clone https://github.com/kuoruan/openwrt-frp.git package/frp
     - name: Config - copy k2p build config
       run: cp ./.config.18.06.5.release openwrt-$VERSION/.config
-    - name: Chnroute - download tw chnroute
+    - name: Chnroute - update dnsmasq-extra chnroute
       run: |
-        cd openwrt-$VERSION
-        mkdir -p ./files/etc/
-        wget -O- 'http://ftp.apnic.net/apnic/stats/apnic/delegated-apnic-latest' | awk -F\| '/TW\|ipv4/ { printf("%s/%d\n", $4, 32-log($5)/log(2)) }' > ./files/etc/twnroute.txt
+        cd openwrt-$VERSION/package/openwrt-dnsmasq-extra/dnsmasq-extra/files/data/
+        rm chnroute.txt
+        wget -O- 'http://ftp.apnic.net/apnic/stats/apnic/delegated-apnic-latest' | awk -F\| '/CN\|ipv4/ { printf("%s/%d\n", $4, 32-log($5)/log(2)) }' > ./chnroute.txt
+        ls -hl
     - name: Download - openwrt build dependencies
       run: |
         cd openwrt-$VERSION
@@ -83,3 +86,4 @@ jobs:
       with:
         name: openwrt-k2p
         path: openwrt-${{ env.VERSION }}/bin/targets/ramips/mt7621/
+
