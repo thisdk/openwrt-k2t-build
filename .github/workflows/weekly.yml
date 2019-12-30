@@ -24,7 +24,7 @@ jobs:
     - name: Replace - openwrt version replace
       run: |
         cd openwrt
-        sed -i 's/-SNAPSHOT/.5/g' include/version.mk
+        sed -i 's/-SNAPSHOT/.6/g' include/version.mk
     - name: Delete - delete openwrt shadowsocks
       run: |
         cd openwrt
@@ -51,6 +51,7 @@ jobs:
         git clone https://github.com/thisdk/k2p-openwrt-mt7615_5.0.2.0.git package/k2p-openwrt-mt7615_5.0.2.0
         git clone https://github.com/thisdk/openwrt-simple-obfs.git package/openwrt-simple-obfs
         git clone https://github.com/thisdk/openwrt-shadowsocks.git package/openwrt-shadowsocks
+        git clone https://github.com/thisdk/openwrt-trojan.git package/openwrt-trojan
     - name: Config - copy k2p build config
       run: cp ./.config.18.06.weekly openwrt/.config
     - name: Download - openwrt build dependencies
