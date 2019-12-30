@@ -40,10 +40,6 @@ CONFIG_TARGET_ramips=y
 # CONFIG_TARGET_omap is not set
 # CONFIG_TARGET_uml is not set
 # CONFIG_TARGET_x86 is not set
-# CONFIG_TARGET_ar71xx_generic is not set
-# CONFIG_TARGET_ar71xx_tiny is not set
-# CONFIG_TARGET_ar71xx_nand is not set
-# CONFIG_TARGET_ar71xx_mikrotik is not set
 # CONFIG_TARGET_ramips_mt7620 is not set
 CONFIG_TARGET_ramips_mt7621=y
 # CONFIG_TARGET_ramips_mt76x8 is not set
@@ -51,346 +47,6 @@ CONFIG_TARGET_ramips_mt7621=y
 # CONFIG_TARGET_ramips_rt305x is not set
 # CONFIG_TARGET_ramips_rt3883 is not set
 # CONFIG_TARGET_MULTI_PROFILE is not set
-# CONFIG_TARGET_ar71xx_generic_Default is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_carambola2 is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_lima is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_ALFAAP120C is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_ap121f is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_ap91-5g is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_ALFAAP96 is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_HORNETUB is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_HORNETUBx2 is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_ALFANX is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_n5q is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_r36a is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_TUBE2H16M is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_TUBE2H8M is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_fritz4020 is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_fritz300e is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_fritz450e is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_sc1750 is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_sc300m is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_sc450 is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_c-55 is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_ALL0258N is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_ALL0305 is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_ALL0315N is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_antminer-s1 is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_antminer-s3 is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_antrouter-r1 is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_arduino-yun is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_AP121_16M is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_AP121_8M is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_AP132 is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_AP135 is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_AP136_010 is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_AP136_020 is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_AP96 is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_DB120 is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_PB42 is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_PB44 is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_BXU2000N2 is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_F9K1115V2 is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_bhr-4grv2 is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_WZR450HP2 is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_WZR600DHP is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_WZRHPAG300H is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_WZRHPG300NH is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_WZRHPG300NH2 is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_WZRHPG450H is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_cf-e316n-v2 is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_cf-e320n-v2 is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_cf-e355ac-v1 is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_cf-e355ac-v2 is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_cf-e375ac is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_cf-e380ac-v1 is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_cf-e380ac-v2 is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_cf-e385ac is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_cf-e520n is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_cf-e530n is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_WP543_16M is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_WP543_8M is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_WPE72_16M is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_WPE72_8M is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_wpj342 is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_wpj344 is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_wpj531 is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_wpj558 is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_wpj563 is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_dap-1330-a1 is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_dap-2695-a1 is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_DGL5500A1 is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_DHP1565A1 is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_DIR505A1 is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_DIR825B1 is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_DIR825C1 is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_DIR835A1 is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_dir-869-a1 is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_dragino2 is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_el-m150 is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_el-mini is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_ew-balin is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_ew-dorin is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_ew-dorin-router is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_EAP300V2 is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_ens202ext is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_EPG5000 is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_ESR1750 is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_ESR900 is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_gl-inet-6408A-v1 is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_gl-inet-6416A-v1 is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_gl-domino is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_gl-ar150 is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_gl-ar300 is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_gl-ar300m is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_gl-ar750 is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_gl-mifi is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_gl-usb150 is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_minibox-v1 is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_oolite-v1 is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_oolite-v5.2 is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_oolite-v5.2-dev is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_lan-turtle is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_packet-squirrel is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_wifi-pineapple-nano is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_hiwifi-hc6361 is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_WRT160NL is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_WRT400N is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_mr12 is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_mr16 is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_mc-mac1200r is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_mw4530r-v1 is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_smart-300 is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_WNDAP360 is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_wndr3700 is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_wndr3700v2 is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_wndr3800 is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_wndr3800ch is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_wndrmac is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_wndrmacv2 is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_WNR2200 is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_koala is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_omy-g1 is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_omy-x1 is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_onion-omega is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_som9331 is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_A60 is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_MR1750 is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_MR600 is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_MR900 is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_OM2P is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_OM5PAC is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_OM5P is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_cpe505n is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_r602n is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_ts-d084 is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_pqi-air-pen is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_MZKW04NU is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_MZKW300NH is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_cap324 is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_cap324-nocloud is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_cr3000-nocloud is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_cr3000 is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_cr5000-nocloud is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_cr5000 is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_DLRTDEV01 is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_qihoo-c301 is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_AP143_16M is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_AP143_8M is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_AP147_010 is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_AP152_16M is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_e1700ac-v2-16M is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_e1700ac-v2-8M is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_e558-v2-16M is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_e558-v2-8M is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_e600g-v2-16M is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_e600g-v2-8M is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_e600gac-v2-16M is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_e600gac-v2-8M is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_e750a-v4-16M is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_e750a-v4-8M is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_e750g-v8-16M is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_e750g-v8-8M is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_ap531b0 is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_wam250 is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_CAP4200AG is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_EAP7660D is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_wlr8100 is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_bsb is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_archer-c25-v1 is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_archer-c5-v1 is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_archer-c58-v1 is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_archer-c59-v1 is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_archer-c60-v1 is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_archer-c60-v2 is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_archer-c7-v1 is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_archer-c7-v2 is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_archer-c7-v2-il is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_tl-wdr7500-v3 is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_archer-c7-v4 is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_archer-c7-v5 is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_cpe210-v2 is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_cpe210-220-v1 is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_cpe510-520-v1 is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_eap120-v1 is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_re355-v1 is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_re450-v1 is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_tl-mr6400-v1 is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_tl-wdr3500-v1 is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_tl-wdr3600-v1 is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_tl-wdr4300-v1 is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_tl-wdr4300-v1-il is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_tl-wdr4310-v1 is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_tl-wdr4900-v2 is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_tl-wdr6500-v2 is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_tl-wpa8630-v1 is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_tl-wr1043n-v5 is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_tl-wr1043nd-v1 is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_tl-wr1043nd-v2 is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_tl-wr1043nd-v3 is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_tl-wr1043nd-v4 is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_tl-wr2543-v1 is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_tl-wr710n-v1 is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_tl-wr710n-v2.1 is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_tl-wr810n-v1 is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_tl-wr810n-v2 is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_tl-wr842n-v1 is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_tl-wr842n-v2 is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_tl-wr842n-v3 is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_tl-wr902ac-v1 is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_tl-wr942n-v1 is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_wbs210-v1 is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_wbs510-v1 is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_TEW673GRU is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_TEW732BR is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_TEW823DRU is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_tellstick-znet-lite is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_rut900 is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_ubnt-air-gateway is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_ubnt-air-gateway-pro is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_ubnt-airrouter is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_ubnt-bullet-m is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_ubnt-ls-sr71 is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_ubnt-lbe-m5 is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_ubnt-loco-m-xw is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_ubnt-nano-m-xw is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_ubnt-nano-m is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_rw2458n is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_ubnt-rocket-m-ti is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_ubnt-rocket-m-xw is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_ubnt-rocket-m is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_ubnt-rs is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_ubnt-rspro is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_ubnt-uap-pro is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_ubnt-unifi is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_ubnt-unifiac-lite is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_ubnt-unifiac-mesh is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_ubnt-unifiac-mesh-pro is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_ubnt-unifiac-pro is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_ubnt-unifi-outdoor is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_ubnt-unifi-outdoor-plus is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_ubdev01 is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_wrtnode2q is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_dr342 is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_dr531 is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_weio is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_mynet-n600 is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_mynet-n750 is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_MYNETREXT is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_ap90q is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_cpe830 is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_cpe870 is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_sr3200 is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_t830 is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_xd3200 is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_zbt-we1526 is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_ZCN1523H28 is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_ZCN1523H516 is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_NBG6616 is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_dLAN_Hotspot is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_dLAN_pro_1200_ac is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_dLAN_pro_500_wp is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_rme-eg200 is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_JA76PF is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_JA76PF2 is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_JWAP003 is not set
-# CONFIG_TARGET_ar71xx_generic_DEVICE_jwap230 is not set
-# CONFIG_TARGET_ramips_mt7620_Default is not set
-# CONFIG_TARGET_ramips_mt7620_DEVICE_alfa-network_ac1200rm is not set
-# CONFIG_TARGET_ramips_mt7620_DEVICE_ai-br100 is not set
-# CONFIG_TARGET_ramips_mt7620_DEVICE_rp-n53 is not set
-# CONFIG_TARGET_ramips_mt7620_DEVICE_rt-ac51u is not set
-# CONFIG_TARGET_ramips_mt7620_DEVICE_rt-n12p is not set
-# CONFIG_TARGET_ramips_mt7620_DEVICE_rt-n14u is not set
-# CONFIG_TARGET_ramips_mt7620_DEVICE_whr-1166d is not set
-# CONFIG_TARGET_ramips_mt7620_DEVICE_whr-300hp2 is not set
-# CONFIG_TARGET_ramips_mt7620_DEVICE_whr-600d is not set
-# CONFIG_TARGET_ramips_mt7620_DEVICE_wmr-300 is not set
-# CONFIG_TARGET_ramips_mt7620_DEVICE_cf-wr800n is not set
-# CONFIG_TARGET_ramips_mt7620_DEVICE_dch-m225 is not set
-# CONFIG_TARGET_ramips_mt7620_DEVICE_dir-810l is not set
-# CONFIG_TARGET_ramips_mt7620_DEVICE_dlink_dwr-116-a1 is not set
-# CONFIG_TARGET_ramips_mt7620_DEVICE_dlink_dwr-921-c1 is not set
-# CONFIG_TARGET_ramips_mt7620_DEVICE_dlink_dwr-921-c3 is not set
-# CONFIG_TARGET_ramips_mt7620_DEVICE_tiny-ac is not set
-# CONFIG_TARGET_ramips_mt7620_DEVICE_wrh-300cr is not set
-# CONFIG_TARGET_ramips_mt7620_DEVICE_gl-mt300a is not set
-# CONFIG_TARGET_ramips_mt7620_DEVICE_gl-mt300n is not set
-# CONFIG_TARGET_ramips_mt7620_DEVICE_gl-mt750 is not set
-# CONFIG_TARGET_ramips_mt7620_DEVICE_c108 is not set
-# CONFIG_TARGET_ramips_mt7620_DEVICE_hc5661 is not set
-# CONFIG_TARGET_ramips_mt7620_DEVICE_hc5761 is not set
-# CONFIG_TARGET_ramips_mt7620_DEVICE_hc5861 is not set
-# CONFIG_TARGET_ramips_mt7620_DEVICE_u25awf-h1 is not set
-# CONFIG_TARGET_ramips_mt7620_DEVICE_mlw221 is not set
-# CONFIG_TARGET_ramips_mt7620_DEVICE_mlwg2 is not set
-# CONFIG_TARGET_ramips_mt7620_DEVICE_y1 is not set
-# CONFIG_TARGET_ramips_mt7620_DEVICE_y1s is not set
-# CONFIG_TARGET_ramips_mt7620_DEVICE_e1700 is not set
-# CONFIG_TARGET_ramips_mt7620_DEVICE_mt7620a_mt7530 is not set
-# CONFIG_TARGET_ramips_mt7620_DEVICE_mt7620a_mt7610e is not set
-# CONFIG_TARGET_ramips_mt7620_DEVICE_mt7620a is not set
-# CONFIG_TARGET_ramips_mt7620_DEVICE_mt7620a_v22sg is not set
-# CONFIG_TARGET_ramips_mt7620_DEVICE_microwrt is not set
-# CONFIG_TARGET_ramips_mt7620_DEVICE_ex2700 is not set
-# CONFIG_TARGET_ramips_mt7620_DEVICE_ex3700-ex3800 is not set
-# CONFIG_TARGET_ramips_mt7620_DEVICE_wn3000rpv3 is not set
-# CONFIG_TARGET_ramips_mt7620_DEVICE_wt3020-4M is not set
-# CONFIG_TARGET_ramips_mt7620_DEVICE_wt3020-8M is not set
-# CONFIG_TARGET_ramips_mt7620_DEVICE_oy-0001 is not set
-# CONFIG_TARGET_ramips_mt7620_DEVICE_phicomm_k2g is not set
-# CONFIG_TARGET_ramips_mt7620_DEVICE_psg1208 is not set
-# CONFIG_TARGET_ramips_mt7620_DEVICE_psg1218a is not set
-# CONFIG_TARGET_ramips_mt7620_DEVICE_psg1218b is not set
-# CONFIG_TARGET_ramips_mt7620_DEVICE_cs-qr10 is not set
-# CONFIG_TARGET_ramips_mt7620_DEVICE_db-wrt01 is not set
-# CONFIG_TARGET_ramips_mt7620_DEVICE_mzk-750dhp is not set
-# CONFIG_TARGET_ramips_mt7620_DEVICE_mzk-ex300np is not set
-# CONFIG_TARGET_ramips_mt7620_DEVICE_mzk-ex750np is not set
-# CONFIG_TARGET_ramips_mt7620_DEVICE_ravpower_wd03 is not set
-# CONFIG_TARGET_ramips_mt7620_DEVICE_d240 is not set
-# CONFIG_TARGET_ramips_mt7620_DEVICE_na930 is not set
-# CONFIG_TARGET_ramips_mt7620_DEVICE_tplink_c20-v1 is not set
-# CONFIG_TARGET_ramips_mt7620_DEVICE_ArcherC20i is not set
-# CONFIG_TARGET_ramips_mt7620_DEVICE_ArcherC50v1 is not set
-# CONFIG_TARGET_ramips_mt7620_DEVICE_ArcherMR200 is not set
-# CONFIG_TARGET_ramips_mt7620_DEVICE_vonets_var11n-300 is not set
-# CONFIG_TARGET_ramips_mt7620_DEVICE_wrtnode is not set
-# CONFIG_TARGET_ramips_mt7620_DEVICE_miwifi-mini is not set
-# CONFIG_TARGET_ramips_mt7620_DEVICE_youku-yk1 is not set
-# CONFIG_TARGET_ramips_mt7620_DEVICE_bocco is not set
-# CONFIG_TARGET_ramips_mt7620_DEVICE_zte-q7 is not set
-# CONFIG_TARGET_ramips_mt7620_DEVICE_zbt-ape522ii is not set
-# CONFIG_TARGET_ramips_mt7620_DEVICE_zbt-cpe102 is not set
-# CONFIG_TARGET_ramips_mt7620_DEVICE_zbt-wa05 is not set
-# CONFIG_TARGET_ramips_mt7620_DEVICE_we1026-5g-16m is not set
-# CONFIG_TARGET_ramips_mt7620_DEVICE_zbt-we2026 is not set
-# CONFIG_TARGET_ramips_mt7620_DEVICE_zbt-we826-16M is not set
-# CONFIG_TARGET_ramips_mt7620_DEVICE_zbt-we826-32M is not set
-# CONFIG_TARGET_ramips_mt7620_DEVICE_zbt-wr8305rt is not set
-# CONFIG_TARGET_ramips_mt7620_DEVICE_kn_rc is not set
-# CONFIG_TARGET_ramips_mt7620_DEVICE_kn_rf is not set
-# CONFIG_TARGET_ramips_mt7620_DEVICE_kng_rc is not set
 # CONFIG_TARGET_ramips_mt7621_Default is not set
 # CONFIG_TARGET_ramips_mt7621_DEVICE_ew1200 is not set
 # CONFIG_TARGET_ramips_mt7621_DEVICE_wsr-1166 is not set
@@ -1744,7 +1400,7 @@ CONFIG_PACKAGE_libgcc=y
 # CONFIG_PACKAGE_libgomp is not set
 CONFIG_PACKAGE_libpthread=y
 CONFIG_PACKAGE_librt=y
-# CONFIG_PACKAGE_libstdcpp is not set
+CONFIG_PACKAGE_libstdcpp=y
 CONFIG_PACKAGE_logd=y
 CONFIG_PACKAGE_mtd=y
 CONFIG_PACKAGE_netifd=y
@@ -3647,6 +3303,7 @@ CONFIG_PACKAGE_luci-app-firewall=y
 # CONFIG_PACKAGE_luci-app-fwknopd is not set
 # CONFIG_PACKAGE_luci-app-hd-idle is not set
 # CONFIG_PACKAGE_luci-app-hnet is not set
+# CONFIG_PACKAGE_luci-app-https-dns-proxy is not set
 # CONFIG_PACKAGE_luci-app-lxc is not set
 # CONFIG_PACKAGE_luci-app-meshwizard is not set
 # CONFIG_PACKAGE_luci-app-minidlna is not set
@@ -3668,7 +3325,6 @@ CONFIG_PACKAGE_luci-app-firewall=y
 # CONFIG_PACKAGE_luci-app-radicale is not set
 # CONFIG_PACKAGE_luci-app-rp-pppoe-server is not set
 # CONFIG_PACKAGE_luci-app-samba is not set
-# CONFIG_PACKAGE_luci-app-shadowsocks is not set
 # CONFIG_PACKAGE_luci-app-shairplay is not set
 # CONFIG_PACKAGE_luci-app-siitwizard is not set
 # CONFIG_PACKAGE_luci-app-simple-adblock is not set
@@ -3689,14 +3345,14 @@ CONFIG_PACKAGE_luci-app-vlmcsd=y
 # CONFIG_PACKAGE_luci-app-watchcat is not set
 # CONFIG_PACKAGE_luci-app-wifischedule is not set
 # CONFIG_PACKAGE_luci-app-wireguard is not set
-# CONFIG_PACKAGE_luci-app-wol is not set
+CONFIG_PACKAGE_luci-app-wol=y
 
 #
 # 4. Themes
 #
 CONFIG_PACKAGE_luci-theme-bootstrap=y
 # CONFIG_PACKAGE_luci-theme-freifunk-generic is not set
-# CONFIG_PACKAGE_luci-theme-material is not set
+CONFIG_PACKAGE_luci-theme-material=y
 # CONFIG_PACKAGE_luci-theme-openwrt is not set
 CONFIG_PACKAGE_luci-theme-rosy=y
 
@@ -3839,6 +3495,31 @@ CONFIG_PACKAGE_luci-i18n-firewall-zh-cn=y
 CONFIG_PACKAGE_luci-i18n-upnp-zh-cn=y
 # CONFIG_PACKAGE_luci-i18n-upnp-zh-tw is not set
 CONFIG_PACKAGE_luci-i18n-vlmcsd-zh-cn=y
+# CONFIG_PACKAGE_luci-i18n-wol-ca is not set
+# CONFIG_PACKAGE_luci-i18n-wol-cs is not set
+# CONFIG_PACKAGE_luci-i18n-wol-de is not set
+# CONFIG_PACKAGE_luci-i18n-wol-el is not set
+# CONFIG_PACKAGE_luci-i18n-wol-en is not set
+# CONFIG_PACKAGE_luci-i18n-wol-es is not set
+# CONFIG_PACKAGE_luci-i18n-wol-fr is not set
+# CONFIG_PACKAGE_luci-i18n-wol-he is not set
+# CONFIG_PACKAGE_luci-i18n-wol-hu is not set
+# CONFIG_PACKAGE_luci-i18n-wol-it is not set
+# CONFIG_PACKAGE_luci-i18n-wol-ja is not set
+# CONFIG_PACKAGE_luci-i18n-wol-ms is not set
+# CONFIG_PACKAGE_luci-i18n-wol-no is not set
+# CONFIG_PACKAGE_luci-i18n-wol-pl is not set
+# CONFIG_PACKAGE_luci-i18n-wol-pt is not set
+# CONFIG_PACKAGE_luci-i18n-wol-pt-br is not set
+# CONFIG_PACKAGE_luci-i18n-wol-ro is not set
+# CONFIG_PACKAGE_luci-i18n-wol-ru is not set
+# CONFIG_PACKAGE_luci-i18n-wol-sk is not set
+# CONFIG_PACKAGE_luci-i18n-wol-sv is not set
+# CONFIG_PACKAGE_luci-i18n-wol-tr is not set
+# CONFIG_PACKAGE_luci-i18n-wol-uk is not set
+# CONFIG_PACKAGE_luci-i18n-wol-vi is not set
+CONFIG_PACKAGE_luci-i18n-wol-zh-cn=y
+# CONFIG_PACKAGE_luci-i18n-wol-zh-tw is not set
 
 #
 # Mail
@@ -3892,9 +3573,134 @@ CONFIG_POSTFIX_PCRE=y
 #
 # Drivers
 #
-# CONFIG_PACKAGE_kmod-mt_wifi is not set
+CONFIG_PACKAGE_kmod-mt_wifi=y
+CONFIG_MTK_SUPPORT_OPENWRT=y
+CONFIG_MTK_WIFI_DRIVER=y
+# CONFIG_MTK_FIRST_IF_NONE is not set
+CONFIG_MTK_FIRST_IF_MT7615E=y
+# CONFIG_MTK_FIRST_IF_MT7622 is not set
+# CONFIG_MTK_FIRST_IF_MT7626 is not set
+CONFIG_MTK_SECOND_IF_NONE=y
+# CONFIG_MTK_SECOND_IF_MT7615E is not set
+CONFIG_MTK_THIRD_IF_NONE=y
+# CONFIG_MTK_THIRD_IF_MT7615E is not set
+CONFIG_MTK_RT_FIRST_CARD=7615
+CONFIG_MTK_RT_FIRST_IF_RF_OFFSET=0xc0000
+CONFIG_MTK_MT_WIFI=y
+CONFIG_MTK_MT_WIFI_PATH="mt_wifi"
+
+#
+# WiFi Generic Feature Options
+#
+CONFIG_MTK_FIRST_IF_EEPROM_FLASH=y
+# CONFIG_MTK_FIRST_IF_EEPROM_PROM is not set
+# CONFIG_MTK_FIRST_IF_EEPROM_EFUSE is not set
+CONFIG_MTK_RT_FIRST_CARD_EEPROM="flash"
+CONFIG_MTK_WIFI_BASIC_FUNC=y
+CONFIG_MTK_DOT11_N_SUPPORT=y
+CONFIG_MTK_DOT11_VHT_AC=y
+CONFIG_MTK_G_BAND_256QAM_SUPPORT=y
+CONFIG_MTK_BRCM_256QAM_SUPPORT=y
+CONFIG_MTK_VHT_TXBF_2G_EPIGRAM_IE_SUPPORT=y
+CONFIG_MTK_TPC_SUPPORT=y
+CONFIG_MTK_ICAP_SUPPORT=y
+CONFIG_MTK_SPECTRUM_SUPPORT=y
+CONFIG_MTK_BACKGROUND_SCAN_SUPPORT=y
+CONFIG_MTK_SMART_CARRIER_SENSE_SUPPORT=y
+CONFIG_MTK_MT_DFS_SUPPORT=y
+CONFIG_MTK_HDR_TRANS_TX_SUPPORT=y
+CONFIG_MTK_HDR_TRANS_RX_SUPPORT=y
+CONFIG_MTK_DBDC_MODE=y
+CONFIG_MTK_MULTI_PROFILE_SUPPORT=y
+# CONFIG_MTK_DEFAULT_5G_PROFILE is not set
+CONFIG_MTK_WSC_INCLUDED=y
+CONFIG_MTK_WSC_V2_SUPPORT=y
+CONFIG_MTK_DOT11W_PMF_SUPPORT=y
+CONFIG_MTK_TXBF_SUPPORT=y
+# CONFIG_MTK_FAST_NAT_SUPPORT is not set
+# CONFIG_MTK_FTM_SUPPORT is not set
+CONFIG_MTK_IGMP_SNOOP_SUPPORT=y
+CONFIG_MTK_RTMP_FLASH_SUPPORT=y
+CONFIG_MTK_PRE_CAL_TRX_SET1_SUPPORT=y
+CONFIG_MTK_RLM_CAL_CACHE_SUPPORT=y
+CONFIG_MTK_PRE_CAL_TRX_SET2_SUPPORT=y
+# CONFIG_MTK_RF_LOCKDOWN_SUPPORT is not set
+# CONFIG_MTK_LINK_TEST_SUPPORT is not set
+CONFIG_MTK_ATE_SUPPORT=y
+# CONFIG_MTK_PASSPOINT_R2 is not set
+# CONFIG_MTK_MBO_SUPPORT is not set
+CONFIG_MTK_UAPSD=y
+CONFIG_MTK_TCP_RACK_SUPPORT=y
+CONFIG_MTK_RED_SUPPORT=y
+# CONFIG_MTK_FDB_SUPPORT is not set
+CONFIG_MTK_FIRST_IF_EPAELNA=y
+# CONFIG_MTK_FIRST_IF_IPAILNA is not set
+# CONFIG_MTK_FIRST_IF_IPAELNA is not set
+# CONFIG_MTK_RLT_MAC is not set
+# CONFIG_MTK_RTMP_MAC is not set
+
+#
+# WiFi Operation Modes
+#
+CONFIG_MTK_WIFI_MODE_AP=m
+# CONFIG_MTK_WIFI_MODE_STA is not set
+# CONFIG_MTK_WIFI_MODE_BOTH is not set
+CONFIG_MTK_MT_AP_SUPPORT=m
+CONFIG_MTK_WDS_SUPPORT=y
+CONFIG_MTK_MBSS_SUPPORT=y
+CONFIG_MTK_APCLI_SUPPORT=y
+# CONFIG_MTK_APCLI_CERT_SUPPORT is not set
+CONFIG_MTK_MAC_REPEATER_SUPPORT=y
+# CONFIG_MTK_MWDS is not set
+CONFIG_MTK_MUMIMO_SUPPORT=y
+CONFIG_MTK_MU_RA_SUPPORT=y
+# CONFIG_MTK_DOT11R_FT_SUPPORT is not set
+# CONFIG_MTK_DOT11K_RRM_SUPPORT is not set
+# CONFIG_MTK_CFG80211_SUPPORT is not set
+# CONFIG_MTK_DSCP_PRI_SUPPORT is not set
+# CONFIG_MTK_CON_WPS_SUPPORT is not set
+CONFIG_MTK_MCAST_RATE_SPECIFIC=y
+CONFIG_MTK_VOW_SUPPORT=y
+CONFIG_MTK_BAND_STEERING=y
+# CONFIG_MTK_LED_CONTROL_SUPPORT is not set
+# CONFIG_MTK_WLAN_HOOK is not set
+# CONFIG_MTK_RADIUS_ACCOUNTING_SUPPORT is not set
+CONFIG_MTK_GREENAP_SUPPORT=y
+CONFIG_MTK_PCIE_ASPM_DYM_CTRL_SUPPORT=y
+# CONFIG_MTK_COEX_SUPPORT is not set
+# CONFIG_MTK_EASY_SETUP_SUPPORT is not set
+# CONFIG_MTK_EVENT_NOTIFIER_SUPPORT is not set
+# CONFIG_MTK_AIR_MONITOR is not set
+# CONFIG_MTK_WNM_SUPPORT is not set
+# CONFIG_MTK_INTERWORKING is not set
+# CONFIG_MTK_LINUX_NET_TXQ_SUPPORT is not set
+CONFIG_MTK_WIFI_MT_MAC=y
+CONFIG_MTK_MT_MAC=y
+# CONFIG_MTK_CHIP_MT7603E is not set
+CONFIG_MTK_CHIP_MT7615E=y
+# CONFIG_MTK_CHIP_MT7622 is not set
+# CONFIG_MTK_CHIP_MT7663E is not set
+# CONFIG_MTK_CHIP_MT7626 is not set
 # CONFIG_PACKAGE_kmod-wifi_forward is not set
-# CONFIG_PACKAGE_wifi-l1profile is not set
+CONFIG_PACKAGE_wifi-l1profile=y
+CONFIG_first_card=y
+CONFIG_first_card_name="MT7622"
+CONFIG_first_card_profile_path="/etc/wireless/mediatek/mt7622.1.dat"
+CONFIG_first_card_init_script="/lib/wifi/mt7615e.lua"
+CONFIG_first_card_init_compatible="mt7615e"
+CONFIG_first_card_EEPROM_offset="0x0"
+CONFIG_first_card_EEPROM_size="0x5000"
+CONFIG_first_card_EEPROM_name="e2p"
+CONFIG_first_card_main_ifname="ra0"
+CONFIG_first_card_ext_ifname="ra"
+CONFIG_first_card_wds_ifname="wds"
+CONFIG_first_card_apcli_ifname="apcli"
+CONFIG_first_card_mesh_ifname="mesh"
+CONFIG_first_card_nvram_zone="dev1"
+CONFIG_first_card_single_sku_path="/etc/wireless/mediatek/mt7615e-sku.dat"
+CONFIG_first_card_bf_sku_path="/etc/wireless/mediatek/mt7615e-sku-bf.dat"
+# CONFIG_second_card is not set
+# CONFIG_third_card is not set
 
 #
 # Libraries
@@ -3904,7 +3710,8 @@ CONFIG_POSTFIX_PCRE=y
 #
 # Misc
 #
-# CONFIG_PACKAGE_mtk-luci-plugin is not set
+CONFIG_PACKAGE_mtk-luci-plugin=y
+CONFIG_LUCI_APP_MTKWIFI=y
 
 #
 # Multimedia
@@ -4624,15 +4431,15 @@ CONFIG_PACKAGE_uhttpd=y
 # CONFIG_PACKAGE_darkstat is not set
 # CONFIG_PACKAGE_dhcpcd is not set
 # CONFIG_PACKAGE_dmapd is not set
-# CONFIG_PACKAGE_dns-forwarder is not set
+CONFIG_PACKAGE_dnsFtcp=y
 # CONFIG_PACKAGE_dnscrypt is not set
-# CONFIG_PACKAGE_dnsmasq-extra is not set
+CONFIG_PACKAGE_dnsmasq-extra=y
 # CONFIG_PACKAGE_ds-lite is not set
 # CONFIG_PACKAGE_eapol-test is not set
 # CONFIG_PACKAGE_eapol-test-openssl is not set
 # CONFIG_PACKAGE_eapol-test-wolfssl is not set
 # CONFIG_PACKAGE_esniper is not set
-# CONFIG_PACKAGE_etherwake is not set
+CONFIG_PACKAGE_etherwake=y
 # CONFIG_PACKAGE_ethtool is not set
 # CONFIG_PACKAGE_fakeidentd is not set
 # CONFIG_PACKAGE_foolsm is not set
@@ -4652,7 +4459,7 @@ CONFIG_PACKAGE_uhttpd=y
 # CONFIG_PACKAGE_http-dns is not set
 # CONFIG_PACKAGE_httping is not set
 # CONFIG_PACKAGE_httping-nossl is not set
-# CONFIG_PACKAGE_https_dns_proxy is not set
+# CONFIG_PACKAGE_https-dns-proxy is not set
 # CONFIG_PACKAGE_i2pd is not set
 # CONFIG_PACKAGE_ibrdtn-tools is not set
 # CONFIG_PACKAGE_ibrdtnd is not set
@@ -4786,6 +4593,7 @@ CONFIG_PACKAGE_simple-obfs-server=y
 # Simple-obfs Compile Configuration
 #
 # CONFIG_SIMPLE_OBFS_STATIC_LINK is not set
+CONFIG_PACKAGE_smartdns=y
 # CONFIG_PACKAGE_smartsnmpd is not set
 # CONFIG_PACKAGE_snmp-mibs is not set
 # CONFIG_PACKAGE_snmp-utils is not set
