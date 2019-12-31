@@ -1,9 +1,5 @@
 name: OpenWrt Weekly CI
-
-on:
-  release:
-    types: [created]
-
+on: [push]
 jobs:
   build:
     runs-on: ubuntu-18.04
