@@ -56,6 +56,7 @@ jobs:
         git clone https://github.com/thisdk/openwrt-vlmcsd.git package/openwrt-vlmcsd
         git clone https://github.com/thisdk/openwrt-simple-obfs.git package/openwrt-simple-obfs
         git clone https://github.com/thisdk/openwrt-shadowsocks.git package/openwrt-shadowsocks
+        git clone https://github.com/thisdk/openwrt-v2ray-plugin.git package/openwrt-v2ray-plugin
         git clone https://github.com/thisdk/k2p-openwrt-mt7615_5.0.2.0.git package/k2p-openwrt-mt7615_5.0.2.0
     - name: Config - copy k2p build config
       run: cp ./.config.18.06.6.release openwrt-$VERSION/.config
