@@ -1,33 +1,31 @@
 name: OpenWrt Weekly CI
 on:
   schedule:
-    - cron:  '0 18 * * 4'
+    - cron:  '0 0 * * 5'
 jobs:
   build:
     runs-on: ubuntu-18.04
+    env:
+      VERSION: 18.06.6
     steps:
     - name: Checkout - clone repository
       uses: actions/checkout@v1
     - name: Install - system build dependencies
       run: sudo apt install subversion build-essential libncurses5-dev zlib1g-dev gawk git ccache gettext libssl-dev xsltproc zip
-    - name: Clone - openwrt source clone
+    - name: Download - openwrt source download
       run: |
-        git clone -b openwrt-18.06 https://git.openwrt.org/openwrt/openwrt.git
+        git clone -b openwrt-18.06 https://git.openwrt.org/openwrt/openwrt.git openwrt-$VERSION
     - name: Update - openwrt source update
       run: |
-        cd openwrt
+        cd openwrt-$VERSION
         ./scripts/feeds update -a
     - name: Install - openwrt source install
       run: |
-        cd openwrt
+        cd openwrt-$VERSION
         ./scripts/feeds install -a
-    - name: Replace - openwrt version replace
-      run: |
-        cd openwrt
-        sed -i 's/-SNAPSHOT/.5/g' include/version.mk
     - name: Delete - delete openwrt shadowsocks
       run: |
-        cd openwrt
+        cd openwrt-$VERSION
         rm -rf feeds/luci/applications/luci-app-shadowsocks-libev/luasrc/controller/shadowsocks-libev.lua
         rm -rf feeds/luci/applications/luci-app-shadowsocks-libev/luasrc/model/shadowsocks-libev.lua
         rm -rf feeds/luci/applications/luci-app-shadowsocks-libev/root/etc/uci-defaults/40_luci-shadowsocks-libev
@@ -41,7 +39,7 @@ jobs:
         rm -rf package/feeds/packages/shadowsocks-libev
     - name: Clone - openwrt plugin source
       run: |
-        cd openwrt
+        cd openwrt-$VERSION
         git clone https://github.com/pymumu/smartdns.git ../smartdns
         cp -r ../smartdns/package/openwrt/ ./package/smartdns
         git clone -b openwrt-18.06 https://github.com/rosywrt/luci-theme-rosy.git package/luci-theme-rosy
@@ -56,24 +54,25 @@ jobs:
         git clone https://github.com/thisdk/openwrt-vlmcsd.git package/openwrt-vlmcsd
         git clone https://github.com/thisdk/openwrt-simple-obfs.git package/openwrt-simple-obfs
         git clone https://github.com/thisdk/openwrt-shadowsocks.git package/openwrt-shadowsocks
+        git clone https://github.com/thisdk/openwrt-v2ray-plugin.git package/openwrt-v2ray-plugin
         git clone https://github.com/thisdk/k2p-openwrt-mt7615_5.0.2.0.git package/k2p-openwrt-mt7615_5.0.2.0
     - name: Config - copy k2p build config
-      run: cp ./.config.18.06.weekly openwrt/.config
+      run: cp ./.config.18.06.6.release openwrt-$VERSION/.config
     - name: Download - openwrt build dependencies
       run: |
-        cd openwrt
+        cd openwrt-$VERSION
         make download -j10
     - name: Build - make openwrt source
       run: |
-        cd openwrt
+        cd openwrt-$VERSION
         make -j4
     - name: Remove - delete packages files
       run: |
-        cd openwrt/bin/targets/ramips/mt7621/
+        cd openwrt-$VERSION/bin/targets/ramips/mt7621/
         rm -rf packages/
         ls -hl
     - name: Upload - push to artifact file
       uses: actions/upload-artifact@v1
       with:
         name: openwrt-k2p
-        path: openwrt/bin/targets/ramips/mt7621/
+        path: openwrt-${{ env.VERSION }}/bin/targets/ramips/mt7621/
