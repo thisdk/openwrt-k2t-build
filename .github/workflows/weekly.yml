@@ -23,6 +23,10 @@ jobs:
       run: |
         cd openwrt-$VERSION
         ./scripts/feeds install -a
+    - name: Replace - openwrt version replace
+      run: |
+        cd openwrt
+        sed -i 's/-SNAPSHOT/.5/g' include/version.mk
     - name: Delete - delete openwrt shadowsocks
       run: |
         cd openwrt-$VERSION
