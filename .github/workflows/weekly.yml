@@ -26,7 +26,7 @@ jobs:
     - name: Replace - openwrt version replace
       run: |
         cd openwrt
-        sed -i 's/-SNAPSHOT/.5/g' include/version.mk
+        sed -i 's/-SNAPSHOT/.6/g' include/version.mk
     - name: Delete - delete openwrt shadowsocks
       run: |
         cd openwrt-$VERSION
