@@ -1,7 +1,7 @@
 name: OpenWrt Weekly CI
 on:
   schedule:
-    - cron:  '0 0 * * 5'
+    - cron:  '0 9 * * 5'
 jobs:
   build:
     runs-on: ubuntu-18.04
@@ -25,7 +25,7 @@ jobs:
         ./scripts/feeds install -a
     - name: Replace - openwrt version replace
       run: |
-        cd openwrt
+        cd openwrt-$VERSION
         sed -i 's/-SNAPSHOT/.6/g' include/version.mk
     - name: Delete - delete openwrt shadowsocks
       run: |
