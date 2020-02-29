@@ -35,7 +35,7 @@ jobs:
         git clone https://github.com/thisdk/luci-app-vlmcsd.git package/luci-app-vlmcsd
         git clone https://github.com/thisdk/openwrt-vlmcsd.git package/openwrt-vlmcsd
         git clone https://github.com/thisdk/k2p-openwrt-mt7615_5.0.2.0.git package/k2p-openwrt-mt7615_5.0.2.0
-        wget $SMARTDNS_LUCI -O package/base-files/files/rom/luci-app-smartdns
+        wget $SMARTDNS_LUCI -O package/base-files/files/rom/luci-app-smartdns.ipk
     - name: Config - copy k2p build config
       run: cp ./.config.19.07.2.release openwrt-$VERSION/.config
     - name: Download - openwrt build dependencies
