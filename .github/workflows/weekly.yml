@@ -6,7 +6,7 @@ jobs:
   build:
     runs-on: ubuntu-18.04
     env:
-      VERSION: 18.06.7
+      VERSION: 19.07.2
     steps:
     - name: Checkout - clone repository
       uses: actions/checkout@v1
@@ -14,7 +14,7 @@ jobs:
       run: sudo apt install subversion build-essential libncurses5-dev zlib1g-dev gawk git ccache gettext libssl-dev xsltproc zip
     - name: Download - openwrt source download
       run: |
-        git clone -b openwrt-18.06 https://git.openwrt.org/openwrt/openwrt.git openwrt-$VERSION
+        git clone -b openwrt-19.07 https://git.openwrt.org/openwrt/openwrt.git openwrt-$VERSION
     - name: Update - openwrt source update
       run: |
         cd openwrt-$VERSION
@@ -26,37 +26,15 @@ jobs:
     - name: Replace - openwrt version replace
       run: |
         cd openwrt-$VERSION
-        sed -i 's/-SNAPSHOT/.7/g' include/version.mk
-    - name: Delete - delete openwrt shadowsocks
-      run: |
-        cd openwrt-$VERSION
-        rm -rf feeds/luci/applications/luci-app-shadowsocks-libev/luasrc/controller/shadowsocks-libev.lua
-        rm -rf feeds/luci/applications/luci-app-shadowsocks-libev/luasrc/model/shadowsocks-libev.lua
-        rm -rf feeds/luci/applications/luci-app-shadowsocks-libev/root/etc/uci-defaults/40_luci-shadowsocks-libev
-        rm -rf feeds/luci.tmp/info/.packageinfo-applications_luci-app-shadowsocks-libev
-        rm -rf feeds/packages/net/shadowsocks-libev/files/shadowsocks-libev.config
-        rm -rf feeds/packages/net/shadowsocks-libev/files/shadowsocks-libev.init
-        rm -rf feeds/packages.tmp/info/.packageinfo-net_shadowsocks-client
-        rm -rf feeds/packages.tmp/info/.packageinfo-net_shadowsocks-libev
-        rm -rf package/feeds/luci/luci-app-shadowsocks-libev
-        rm -rf package/feeds/packages/shadowsocks-client
-        rm -rf package/feeds/packages/shadowsocks-libev
+        sed -i 's/-SNAPSHOT/.2/g' include/version.mk
     - name: Clone - openwrt plugin source
       run: |
         cd openwrt-$VERSION
-        git clone https://github.com/pymumu/smartdns.git ../smartdns
-        cp -r ../smartdns/package/openwrt/ ./package/smartdns
-        git clone -b openwrt-18.06 https://github.com/rosywrt/luci-theme-rosy.git package/luci-theme-rosy
+        git clone https://github.com/pymumu/smartdns.git ../smartdns && cp -r ../smartdns/package/openwrt/ ./package/smartdns
         git clone https://github.com/LGA1150/openwrt-fullconenat package/fullconenat
-        git clone https://github.com/honwen/luci-app-aliddns.git package/luci-app-aliddns
-        git clone https://github.com/shadowsocks/openwrt-shadowsocks.git package/openwrt-shadowsocks
-        git clone https://github.com/thisdk/luci-app-vlmcsd.git package/luci-app-vlmcsd
-        git clone https://github.com/thisdk/luci-app-smartdns.git package/luci-app-smartdns
-        git clone https://github.com/thisdk/openwrt-vlmcsd.git package/openwrt-vlmcsd
-        git clone https://github.com/thisdk/openwrt-simple-obfs.git package/openwrt-simple-obfs
         git clone https://github.com/thisdk/k2p-openwrt-mt7615_5.0.2.0.git package/k2p-openwrt-mt7615_5.0.2.0
     - name: Config - copy k2p build config
-      run: cp ./.config.18.06.7.release openwrt-$VERSION/.config
+      run: cp ./.config.19.07.2.release openwrt-$VERSION/.config
     - name: Download - openwrt build dependencies
       run: |
         cd openwrt-$VERSION
