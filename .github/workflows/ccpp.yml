@@ -8,7 +8,6 @@ jobs:
     env:
       VERSION: 19.07.2
       URL: https://github.com/openwrt/openwrt/archive/v19.07.2.tar.gz
-      SMARTDNS_LUCI: https://github.com/pymumu/smartdns/releases/download/Release30/luci-app-smartdns.1.2020.02.25-2212.all-luci-all.ipk
     steps:
     - name: Checkout - clone repository
       uses: actions/checkout@v1
@@ -29,13 +28,9 @@ jobs:
     - name: Clone - openwrt plugin source
       run: |
         cd openwrt-$VERSION
-        git clone https://github.com/pymumu/smartdns.git ../smartdns
-        cp -r ../smartdns/package/openwrt/ ./package/openwrt-smartdns
+        git clone https://github.com/pymumu/smartdns.git ../smartdns && cp -r ../smartdns/package/openwrt/ ./package/openwrt-smartdns
         git clone https://github.com/LGA1150/openwrt-fullconenat package/fullconenat
-        git clone https://github.com/thisdk/luci-app-vlmcsd.git package/luci-app-vlmcsd
-        git clone https://github.com/thisdk/openwrt-vlmcsd.git package/openwrt-vlmcsd
         git clone https://github.com/thisdk/k2p-openwrt-mt7615_5.0.2.0.git package/k2p-openwrt-mt7615_5.0.2.0
-        wget $SMARTDNS_LUCI -O package/base-files/files/rom/luci-app-smartdns.ipk
     - name: Config - copy k2p build config
       run: cp ./.config.19.07.2.release openwrt-$VERSION/.config
     - name: Download - openwrt build dependencies
