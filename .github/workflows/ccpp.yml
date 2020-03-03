@@ -28,11 +28,9 @@ jobs:
     - name: Clone - openwrt plugin source
       run: |
         cd openwrt-$VERSION
-        git clone https://github.com/pymumu/smartdns.git ../smartdns && cp -r ../smartdns/package/openwrt/ ./package/openwrt-smartdns
         git clone https://github.com/LGA1150/openwrt-fullconenat package/fullconenat
-        git clone https://github.com/thisdk/k2p-openwrt-mt7615_5.0.2.0.git package/k2p-openwrt-mt7615_5.0.2.0
     - name: Config - copy k2p build config
-      run: cp ./.config.19.07.2.release openwrt-$VERSION/.config
+      run: cp ./.config.19.07.2.mt7615e openwrt-$VERSION/.config
     - name: Download - openwrt build dependencies
       run: |
         cd openwrt-$VERSION
