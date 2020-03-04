@@ -41,6 +41,11 @@ jobs:
       run: |
         cd openwrt-$VERSION
         make -j4
+    - name: Upload - push to artifact file
+      uses: actions/upload-artifact@v1
+      with:
+        name: openwrt-k2p-build-bin
+        path: openwrt-${{ env.VERSION }}/bin/
     - name: Remove - delete packages files
       run: |
         cd openwrt-$VERSION/bin/targets/ramips/mt7621/
@@ -53,9 +58,4 @@ jobs:
         files: openwrt-${{ env.VERSION }}/bin/targets/ramips/mt7621/*
       env:
         GITHUB_TOKEN: ${{ secrets.RELEASES_DEPLOY_TOKEN }}
-    - name: Upload - push to artifact file
-      uses: actions/upload-artifact@v1
-      with:
-        name: openwrt-k2p
-        path: openwrt-${{ env.VERSION }}/bin/targets/ramips/mt7621/
 
