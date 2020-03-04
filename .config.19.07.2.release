@@ -1683,7 +1683,6 @@ CONFIG_PACKAGE_logd=y
 CONFIG_PACKAGE_mtd=y
 CONFIG_PACKAGE_netifd=y
 # CONFIG_PACKAGE_nft-qos is not set
-# CONFIG_PACKAGE_nvram is not set
 # CONFIG_PACKAGE_om-watchdog is not set
 CONFIG_PACKAGE_openwrt-keyring=y
 CONFIG_PACKAGE_opkg=y
@@ -1701,7 +1700,7 @@ CONFIG_PACKAGE_rpcd-mod-file=y
 CONFIG_PACKAGE_rpcd-mod-iwinfo=y
 # CONFIG_PACKAGE_rpcd-mod-rpcsys is not set
 # CONFIG_PACKAGE_snapshot-tool is not set
-CONFIG_PACKAGE_sqm-scripts=y
+# CONFIG_PACKAGE_sqm-scripts is not set
 # CONFIG_PACKAGE_sqm-scripts-extra is not set
 CONFIG_PACKAGE_swconfig=y
 CONFIG_PACKAGE_ubox=y
@@ -2160,7 +2159,7 @@ CONFIG_PACKAGE_kmod-lib-crc-ccitt=y
 # CONFIG_PACKAGE_kmod-ebtables-ipv6 is not set
 # CONFIG_PACKAGE_kmod-ebtables-watchers is not set
 CONFIG_PACKAGE_kmod-ip6tables=y
-CONFIG_PACKAGE_kmod-ip6tables-extra=y
+# CONFIG_PACKAGE_kmod-ip6tables-extra is not set
 # CONFIG_PACKAGE_kmod-ipt-account is not set
 # CONFIG_PACKAGE_kmod-ipt-chaos is not set
 # CONFIG_PACKAGE_kmod-ipt-checksum is not set
@@ -2169,7 +2168,7 @@ CONFIG_PACKAGE_kmod-ip6tables-extra=y
 # CONFIG_PACKAGE_kmod-ipt-compat-xtables is not set
 # CONFIG_PACKAGE_kmod-ipt-condition is not set
 CONFIG_PACKAGE_kmod-ipt-conntrack=y
-CONFIG_PACKAGE_kmod-ipt-conntrack-extra=y
+# CONFIG_PACKAGE_kmod-ipt-conntrack-extra is not set
 # CONFIG_PACKAGE_kmod-ipt-conntrack-label is not set
 CONFIG_PACKAGE_kmod-ipt-core=y
 # CONFIG_PACKAGE_kmod-ipt-debug is not set
@@ -2184,7 +2183,7 @@ CONFIG_PACKAGE_kmod-ipt-fullconenat=y
 # CONFIG_PACKAGE_kmod-ipt-hashlimit is not set
 # CONFIG_PACKAGE_kmod-ipt-iface is not set
 # CONFIG_PACKAGE_kmod-ipt-ipmark is not set
-CONFIG_PACKAGE_kmod-ipt-ipopt=y
+# CONFIG_PACKAGE_kmod-ipt-ipopt is not set
 # CONFIG_PACKAGE_kmod-ipt-ipp2p is not set
 # CONFIG_PACKAGE_kmod-ipt-iprange is not set
 # CONFIG_PACKAGE_kmod-ipt-ipsec is not set
@@ -2196,7 +2195,7 @@ CONFIG_PACKAGE_kmod-ipt-ipset=y
 # CONFIG_PACKAGE_kmod-ipt-lscan is not set
 # CONFIG_PACKAGE_kmod-ipt-lua is not set
 CONFIG_PACKAGE_kmod-ipt-nat=y
-# CONFIG_PACKAGE_kmod-ipt-nat-extra is not set
+CONFIG_PACKAGE_kmod-ipt-nat-extra=y
 CONFIG_PACKAGE_kmod-ipt-nat6=y
 # CONFIG_PACKAGE_kmod-ipt-nathelper-rtsp is not set
 # CONFIG_PACKAGE_kmod-ipt-nflog is not set
@@ -2205,7 +2204,7 @@ CONFIG_PACKAGE_kmod-ipt-offload=y
 # CONFIG_PACKAGE_kmod-ipt-physdev is not set
 # CONFIG_PACKAGE_kmod-ipt-psd is not set
 # CONFIG_PACKAGE_kmod-ipt-quota2 is not set
-CONFIG_PACKAGE_kmod-ipt-raw=y
+# CONFIG_PACKAGE_kmod-ipt-raw is not set
 # CONFIG_PACKAGE_kmod-ipt-raw6 is not set
 # CONFIG_PACKAGE_kmod-ipt-rpfilter is not set
 # CONFIG_PACKAGE_kmod-ipt-sysrq is not set
@@ -2263,7 +2262,7 @@ CONFIG_PACKAGE_kmod-nfnetlink=y
 # CONFIG_PACKAGE_kmod-gigaset is not set
 # CONFIG_PACKAGE_kmod-hfcmulti is not set
 # CONFIG_PACKAGE_kmod-hfcpci is not set
-CONFIG_PACKAGE_kmod-ifb=y
+# CONFIG_PACKAGE_kmod-ifb is not set
 # CONFIG_PACKAGE_kmod-igb is not set
 # CONFIG_PACKAGE_kmod-ixgbe is not set
 # CONFIG_PACKAGE_kmod-ixgbevf is not set
@@ -2349,9 +2348,9 @@ CONFIG_PACKAGE_kmod-pppox=y
 # CONFIG_PACKAGE_kmod-sched is not set
 # CONFIG_PACKAGE_kmod-sched-act-vlan is not set
 # CONFIG_PACKAGE_kmod-sched-bpf is not set
-CONFIG_PACKAGE_kmod-sched-cake=y
+# CONFIG_PACKAGE_kmod-sched-cake is not set
 # CONFIG_PACKAGE_kmod-sched-connmark is not set
-CONFIG_PACKAGE_kmod-sched-core=y
+# CONFIG_PACKAGE_kmod-sched-core is not set
 # CONFIG_PACKAGE_kmod-sched-ctinfo is not set
 # CONFIG_PACKAGE_kmod-sched-flower is not set
 # CONFIG_PACKAGE_kmod-sched-ipset is not set
@@ -2557,6 +2556,114 @@ CONFIG_PACKAGE_kmod-gpio-button-hotplug=y
 # CONFIG_PACKAGE_kmod-mt76x0u is not set
 # CONFIG_PACKAGE_kmod-mt76x2 is not set
 # CONFIG_PACKAGE_kmod-mt76x2u is not set
+CONFIG_PACKAGE_kmod-mt_wifi=y
+CONFIG_MTK_SUPPORT_OPENWRT=y
+CONFIG_MTK_WIFI_DRIVER=y
+CONFIG_MTK_FIRST_IF_MT7615E=y
+# CONFIG_MTK_FIRST_IF_MT7622 is not set
+# CONFIG_MTK_FIRST_IF_MT7626 is not set
+# CONFIG_MTK_FIRST_IF_NONE is not set
+CONFIG_MTK_SECOND_IF_NONE=y
+# CONFIG_MTK_SECOND_IF_MT7615E is not set
+CONFIG_MTK_THIRD_IF_NONE=y
+# CONFIG_MTK_THIRD_IF_MT7615E is not set
+CONFIG_MTK_RT_FIRST_CARD=7615
+CONFIG_MTK_RT_FIRST_IF_RF_OFFSET=0xc0000
+CONFIG_MTK_MT_WIFI=y
+CONFIG_MTK_MT_WIFI_PATH="mt_wifi"
+
+#
+# WiFi Generic Feature Options
+#
+CONFIG_MTK_FIRST_IF_EEPROM_FLASH=y
+# CONFIG_MTK_FIRST_IF_EEPROM_PROM is not set
+# CONFIG_MTK_FIRST_IF_EEPROM_EFUSE is not set
+CONFIG_MTK_RT_FIRST_CARD_EEPROM="flash"
+CONFIG_MTK_WIFI_BASIC_FUNC=y
+CONFIG_MTK_DOT11_N_SUPPORT=y
+CONFIG_MTK_DOT11_VHT_AC=y
+CONFIG_MTK_G_BAND_256QAM_SUPPORT=y
+CONFIG_MTK_BRCM_256QAM_SUPPORT=y
+CONFIG_MTK_VHT_TXBF_2G_EPIGRAM_IE_SUPPORT=y
+CONFIG_MTK_TPC_SUPPORT=y
+CONFIG_MTK_ICAP_SUPPORT=y
+CONFIG_MTK_SPECTRUM_SUPPORT=y
+CONFIG_MTK_BACKGROUND_SCAN_SUPPORT=y
+CONFIG_MTK_SMART_CARRIER_SENSE_SUPPORT=y
+CONFIG_MTK_MT_DFS_SUPPORT=y
+CONFIG_MTK_HDR_TRANS_TX_SUPPORT=y
+CONFIG_MTK_HDR_TRANS_RX_SUPPORT=y
+CONFIG_MTK_DBDC_MODE=y
+CONFIG_MTK_MULTI_PROFILE_SUPPORT=y
+# CONFIG_MTK_DEFAULT_5G_PROFILE is not set
+CONFIG_MTK_WSC_INCLUDED=y
+CONFIG_MTK_WSC_V2_SUPPORT=y
+CONFIG_MTK_DOT11W_PMF_SUPPORT=y
+CONFIG_MTK_TXBF_SUPPORT=y
+# CONFIG_MTK_FAST_NAT_SUPPORT is not set
+# CONFIG_MTK_FTM_SUPPORT is not set
+CONFIG_MTK_IGMP_SNOOP_SUPPORT=y
+CONFIG_MTK_RTMP_FLASH_SUPPORT=y
+CONFIG_MTK_PRE_CAL_TRX_SET1_SUPPORT=y
+CONFIG_MTK_RLM_CAL_CACHE_SUPPORT=y
+CONFIG_MTK_PRE_CAL_TRX_SET2_SUPPORT=y
+# CONFIG_MTK_RF_LOCKDOWN_SUPPORT is not set
+# CONFIG_MTK_LINK_TEST_SUPPORT is not set
+CONFIG_MTK_ATE_SUPPORT=y
+# CONFIG_MTK_PASSPOINT_R2 is not set
+# CONFIG_MTK_MBO_SUPPORT is not set
+CONFIG_MTK_UAPSD=y
+CONFIG_MTK_TCP_RACK_SUPPORT=y
+CONFIG_MTK_RED_SUPPORT=y
+# CONFIG_MTK_FDB_SUPPORT is not set
+CONFIG_MTK_FIRST_IF_EPAELNA=y
+# CONFIG_MTK_FIRST_IF_IPAILNA is not set
+# CONFIG_MTK_FIRST_IF_IPAELNA is not set
+# CONFIG_MTK_RLT_MAC is not set
+# CONFIG_MTK_RTMP_MAC is not set
+
+#
+# WiFi Operation Modes
+#
+CONFIG_MTK_WIFI_MODE_AP=y
+# CONFIG_MTK_WIFI_MODE_STA is not set
+# CONFIG_MTK_WIFI_MODE_BOTH is not set
+CONFIG_MTK_MT_AP_SUPPORT=y
+CONFIG_MTK_WDS_SUPPORT=y
+CONFIG_MTK_MBSS_SUPPORT=y
+CONFIG_MTK_APCLI_SUPPORT=y
+# CONFIG_MTK_APCLI_CERT_SUPPORT is not set
+CONFIG_MTK_MAC_REPEATER_SUPPORT=y
+# CONFIG_MTK_MWDS is not set
+CONFIG_MTK_MUMIMO_SUPPORT=y
+CONFIG_MTK_MU_RA_SUPPORT=y
+# CONFIG_MTK_DOT11R_FT_SUPPORT is not set
+# CONFIG_MTK_DOT11K_RRM_SUPPORT is not set
+# CONFIG_MTK_CFG80211_SUPPORT is not set
+# CONFIG_MTK_DSCP_PRI_SUPPORT is not set
+# CONFIG_MTK_CON_WPS_SUPPORT is not set
+CONFIG_MTK_MCAST_RATE_SPECIFIC=y
+CONFIG_MTK_VOW_SUPPORT=y
+CONFIG_MTK_BAND_STEERING=y
+# CONFIG_MTK_LED_CONTROL_SUPPORT is not set
+# CONFIG_MTK_WLAN_HOOK is not set
+# CONFIG_MTK_RADIUS_ACCOUNTING_SUPPORT is not set
+CONFIG_MTK_GREENAP_SUPPORT=y
+CONFIG_MTK_PCIE_ASPM_DYM_CTRL_SUPPORT=y
+# CONFIG_MTK_COEX_SUPPORT is not set
+# CONFIG_MTK_EASY_SETUP_SUPPORT is not set
+# CONFIG_MTK_EVENT_NOTIFIER_SUPPORT is not set
+# CONFIG_MTK_AIR_MONITOR is not set
+# CONFIG_MTK_WNM_SUPPORT is not set
+# CONFIG_MTK_INTERWORKING is not set
+# CONFIG_MTK_LINUX_NET_TXQ_SUPPORT is not set
+CONFIG_MTK_WIFI_MT_MAC=y
+CONFIG_MTK_MT_MAC=y
+# CONFIG_MTK_CHIP_MT7603E is not set
+CONFIG_MTK_CHIP_MT7615E=y
+# CONFIG_MTK_CHIP_MT7622 is not set
+# CONFIG_MTK_CHIP_MT7663E is not set
+# CONFIG_MTK_CHIP_MT7626 is not set
 # CONFIG_PACKAGE_kmod-mwifiex-pcie is not set
 # CONFIG_PACKAGE_kmod-mwifiex-sdio is not set
 # CONFIG_PACKAGE_kmod-mwl8k is not set
@@ -2590,6 +2697,25 @@ CONFIG_PACKAGE_kmod-gpio-button-hotplug=y
 # CONFIG_PACKAGE_kmod-wl18xx is not set
 # CONFIG_PACKAGE_kmod-wlcore is not set
 # CONFIG_PACKAGE_kmod-zd1211rw is not set
+CONFIG_PACKAGE_wifi-l1profile=y
+CONFIG_first_card=y
+CONFIG_first_card_name="MT7622"
+CONFIG_first_card_profile_path="/etc/wireless/mediatek/mt7622.1.dat"
+CONFIG_first_card_init_script="/lib/wifi/mt7615e.lua"
+CONFIG_first_card_init_compatible="mt7615e"
+CONFIG_first_card_EEPROM_offset="0x0"
+CONFIG_first_card_EEPROM_size="0x5000"
+CONFIG_first_card_EEPROM_name="e2p"
+CONFIG_first_card_main_ifname="ra0"
+CONFIG_first_card_ext_ifname="ra"
+CONFIG_first_card_wds_ifname="wds"
+CONFIG_first_card_apcli_ifname="apcli"
+CONFIG_first_card_mesh_ifname="mesh"
+CONFIG_first_card_nvram_zone="dev1"
+CONFIG_first_card_single_sku_path="/etc/wireless/mediatek/mt7615e-sku.dat"
+CONFIG_first_card_bf_sku_path="/etc/wireless/mediatek/mt7615e-sku-bf.dat"
+# CONFIG_second_card is not set
+# CONFIG_third_card is not set
 
 #
 # Languages
@@ -3969,7 +4095,7 @@ CONFIG_OPENSSL_ENGINE=y
 # CONFIG_OPENSSL_ENGINE_BUILTIN is not set
 # CONFIG_OPENSSL_WITH_GOST is not set
 # CONFIG_PACKAGE_libopenssl-afalg_sync is not set
-# CONFIG_PACKAGE_libopenssl-conf is not set
+CONFIG_PACKAGE_libopenssl-conf=y
 # CONFIG_PACKAGE_libopenssl-devcrypto is not set
 # CONFIG_PACKAGE_libwolfssl is not set
 
@@ -4159,7 +4285,7 @@ CONFIG_LIBCURL_PROXY=y
 # CONFIG_PACKAGE_libdw is not set
 # CONFIG_PACKAGE_libecdsautil is not set
 # CONFIG_PACKAGE_libedit is not set
-CONFIG_PACKAGE_libelf=y
+# CONFIG_PACKAGE_libelf is not set
 # CONFIG_PACKAGE_libesmtp is not set
 # CONFIG_PACKAGE_libestr is not set
 # CONFIG_PACKAGE_libev is not set
@@ -4546,6 +4672,7 @@ CONFIG_PACKAGE_luci-mod-system=y
 # CONFIG_PACKAGE_luci-app-adblock is not set
 # CONFIG_PACKAGE_luci-app-advanced-reboot is not set
 # CONFIG_PACKAGE_luci-app-ahcp is not set
+CONFIG_PACKAGE_luci-app-aliddns=y
 # CONFIG_PACKAGE_luci-app-aria2 is not set
 # CONFIG_PACKAGE_luci-app-banip is not set
 # CONFIG_PACKAGE_luci-app-bcp38 is not set
@@ -4573,6 +4700,7 @@ CONFIG_PACKAGE_luci-app-firewall=y
 # CONFIG_PACKAGE_luci-app-lxc is not set
 # CONFIG_PACKAGE_luci-app-minidlna is not set
 # CONFIG_PACKAGE_luci-app-mjpg-streamer is not set
+CONFIG_PACKAGE_luci-app-mtwifi=y
 # CONFIG_PACKAGE_luci-app-mwan3 is not set
 # CONFIG_PACKAGE_luci-app-nextdns is not set
 # CONFIG_PACKAGE_luci-app-nft-qos is not set
@@ -4603,7 +4731,7 @@ CONFIG_PACKAGE_luci-app-firewall=y
 # CONFIG_PACKAGE_luci-app-simple-adblock is not set
 # CONFIG_PACKAGE_luci-app-snmpd is not set
 # CONFIG_PACKAGE_luci-app-splash is not set
-CONFIG_PACKAGE_luci-app-sqm=y
+# CONFIG_PACKAGE_luci-app-sqm is not set
 # CONFIG_PACKAGE_luci-app-squid is not set
 # CONFIG_PACKAGE_luci-app-statistics is not set
 # CONFIG_PACKAGE_luci-app-tinyproxy is not set
@@ -4793,160 +4921,6 @@ CONFIG_POSTFIX_PCRE=y
 # CONFIG_PACKAGE_ssmtp is not set
 
 #
-# MTK Properties
-#
-
-#
-# Applications
-#
-# CONFIG_PACKAGE_flash is not set
-# CONFIG_PACKAGE_uci2dat is not set
-# CONFIG_PACKAGE_wificonf is not set
-
-#
-# Drivers
-#
-CONFIG_PACKAGE_kmod-mt_wifi=y
-CONFIG_MTK_SUPPORT_OPENWRT=y
-CONFIG_MTK_WIFI_DRIVER=y
-# CONFIG_MTK_FIRST_IF_NONE is not set
-CONFIG_MTK_FIRST_IF_MT7615E=y
-# CONFIG_MTK_FIRST_IF_MT7622 is not set
-# CONFIG_MTK_FIRST_IF_MT7626 is not set
-CONFIG_MTK_SECOND_IF_NONE=y
-# CONFIG_MTK_SECOND_IF_MT7615E is not set
-CONFIG_MTK_THIRD_IF_NONE=y
-# CONFIG_MTK_THIRD_IF_MT7615E is not set
-CONFIG_MTK_RT_FIRST_CARD=7615
-CONFIG_MTK_RT_FIRST_IF_RF_OFFSET=0xc0000
-CONFIG_MTK_MT_WIFI=y
-CONFIG_MTK_MT_WIFI_PATH="mt_wifi"
-
-#
-# WiFi Generic Feature Options
-#
-CONFIG_MTK_FIRST_IF_EEPROM_FLASH=y
-# CONFIG_MTK_FIRST_IF_EEPROM_PROM is not set
-# CONFIG_MTK_FIRST_IF_EEPROM_EFUSE is not set
-CONFIG_MTK_RT_FIRST_CARD_EEPROM="flash"
-CONFIG_MTK_WIFI_BASIC_FUNC=y
-CONFIG_MTK_DOT11_N_SUPPORT=y
-CONFIG_MTK_DOT11_VHT_AC=y
-CONFIG_MTK_G_BAND_256QAM_SUPPORT=y
-CONFIG_MTK_BRCM_256QAM_SUPPORT=y
-CONFIG_MTK_VHT_TXBF_2G_EPIGRAM_IE_SUPPORT=y
-CONFIG_MTK_TPC_SUPPORT=y
-CONFIG_MTK_ICAP_SUPPORT=y
-CONFIG_MTK_SPECTRUM_SUPPORT=y
-CONFIG_MTK_BACKGROUND_SCAN_SUPPORT=y
-CONFIG_MTK_SMART_CARRIER_SENSE_SUPPORT=y
-CONFIG_MTK_MT_DFS_SUPPORT=y
-CONFIG_MTK_HDR_TRANS_TX_SUPPORT=y
-CONFIG_MTK_HDR_TRANS_RX_SUPPORT=y
-CONFIG_MTK_DBDC_MODE=y
-CONFIG_MTK_MULTI_PROFILE_SUPPORT=y
-# CONFIG_MTK_DEFAULT_5G_PROFILE is not set
-CONFIG_MTK_WSC_INCLUDED=y
-CONFIG_MTK_WSC_V2_SUPPORT=y
-CONFIG_MTK_DOT11W_PMF_SUPPORT=y
-CONFIG_MTK_TXBF_SUPPORT=y
-# CONFIG_MTK_FAST_NAT_SUPPORT is not set
-# CONFIG_MTK_FTM_SUPPORT is not set
-CONFIG_MTK_IGMP_SNOOP_SUPPORT=y
-CONFIG_MTK_RTMP_FLASH_SUPPORT=y
-CONFIG_MTK_PRE_CAL_TRX_SET1_SUPPORT=y
-CONFIG_MTK_RLM_CAL_CACHE_SUPPORT=y
-CONFIG_MTK_PRE_CAL_TRX_SET2_SUPPORT=y
-# CONFIG_MTK_RF_LOCKDOWN_SUPPORT is not set
-# CONFIG_MTK_LINK_TEST_SUPPORT is not set
-CONFIG_MTK_ATE_SUPPORT=y
-# CONFIG_MTK_PASSPOINT_R2 is not set
-# CONFIG_MTK_MBO_SUPPORT is not set
-CONFIG_MTK_UAPSD=y
-CONFIG_MTK_TCP_RACK_SUPPORT=y
-CONFIG_MTK_RED_SUPPORT=y
-# CONFIG_MTK_FDB_SUPPORT is not set
-CONFIG_MTK_FIRST_IF_EPAELNA=y
-# CONFIG_MTK_FIRST_IF_IPAILNA is not set
-# CONFIG_MTK_FIRST_IF_IPAELNA is not set
-# CONFIG_MTK_RLT_MAC is not set
-# CONFIG_MTK_RTMP_MAC is not set
-
-#
-# WiFi Operation Modes
-#
-CONFIG_MTK_WIFI_MODE_AP=m
-# CONFIG_MTK_WIFI_MODE_STA is not set
-# CONFIG_MTK_WIFI_MODE_BOTH is not set
-CONFIG_MTK_MT_AP_SUPPORT=m
-CONFIG_MTK_WDS_SUPPORT=y
-CONFIG_MTK_MBSS_SUPPORT=y
-CONFIG_MTK_APCLI_SUPPORT=y
-# CONFIG_MTK_APCLI_CERT_SUPPORT is not set
-CONFIG_MTK_MAC_REPEATER_SUPPORT=y
-# CONFIG_MTK_MWDS is not set
-CONFIG_MTK_MUMIMO_SUPPORT=y
-CONFIG_MTK_MU_RA_SUPPORT=y
-# CONFIG_MTK_DOT11R_FT_SUPPORT is not set
-# CONFIG_MTK_DOT11K_RRM_SUPPORT is not set
-# CONFIG_MTK_CFG80211_SUPPORT is not set
-# CONFIG_MTK_DSCP_PRI_SUPPORT is not set
-# CONFIG_MTK_CON_WPS_SUPPORT is not set
-CONFIG_MTK_MCAST_RATE_SPECIFIC=y
-CONFIG_MTK_VOW_SUPPORT=y
-CONFIG_MTK_BAND_STEERING=y
-# CONFIG_MTK_LED_CONTROL_SUPPORT is not set
-# CONFIG_MTK_WLAN_HOOK is not set
-# CONFIG_MTK_RADIUS_ACCOUNTING_SUPPORT is not set
-CONFIG_MTK_GREENAP_SUPPORT=y
-CONFIG_MTK_PCIE_ASPM_DYM_CTRL_SUPPORT=y
-# CONFIG_MTK_COEX_SUPPORT is not set
-# CONFIG_MTK_EASY_SETUP_SUPPORT is not set
-# CONFIG_MTK_EVENT_NOTIFIER_SUPPORT is not set
-# CONFIG_MTK_AIR_MONITOR is not set
-# CONFIG_MTK_WNM_SUPPORT is not set
-# CONFIG_MTK_INTERWORKING is not set
-# CONFIG_MTK_LINUX_NET_TXQ_SUPPORT is not set
-CONFIG_MTK_WIFI_MT_MAC=y
-CONFIG_MTK_MT_MAC=y
-# CONFIG_MTK_CHIP_MT7603E is not set
-CONFIG_MTK_CHIP_MT7615E=y
-# CONFIG_MTK_CHIP_MT7622 is not set
-# CONFIG_MTK_CHIP_MT7663E is not set
-# CONFIG_MTK_CHIP_MT7626 is not set
-# CONFIG_PACKAGE_kmod-wifi_forward is not set
-CONFIG_PACKAGE_wifi-l1profile=y
-CONFIG_first_card=y
-CONFIG_first_card_name="MT7622"
-CONFIG_first_card_profile_path="/etc/wireless/mediatek/mt7622.1.dat"
-CONFIG_first_card_init_script="/lib/wifi/mt7615e.lua"
-CONFIG_first_card_init_compatible="mt7615e"
-CONFIG_first_card_EEPROM_offset="0x0"
-CONFIG_first_card_EEPROM_size="0x5000"
-CONFIG_first_card_EEPROM_name="e2p"
-CONFIG_first_card_main_ifname="ra0"
-CONFIG_first_card_ext_ifname="ra"
-CONFIG_first_card_wds_ifname="wds"
-CONFIG_first_card_apcli_ifname="apcli"
-CONFIG_first_card_mesh_ifname="mesh"
-CONFIG_first_card_nvram_zone="dev1"
-CONFIG_first_card_single_sku_path="/etc/wireless/mediatek/mt7615e-sku.dat"
-CONFIG_first_card_bf_sku_path="/etc/wireless/mediatek/mt7615e-sku-bf.dat"
-# CONFIG_second_card is not set
-# CONFIG_third_card is not set
-
-#
-# Libraries
-#
-# CONFIG_PACKAGE_libnvram is not set
-
-#
-# Misc
-#
-CONFIG_PACKAGE_mtk-luci-plugin=y
-CONFIG_LUCI_APP_MTKWIFI=y
-
-#
 # Multimedia
 #
 
@@ -5062,7 +5036,7 @@ CONFIG_PACKAGE_wget=y
 # CONFIG_PACKAGE_fwknop is not set
 # CONFIG_PACKAGE_fwknopd is not set
 CONFIG_PACKAGE_ip6tables=y
-CONFIG_PACKAGE_ip6tables-extra=y
+# CONFIG_PACKAGE_ip6tables-extra is not set
 CONFIG_PACKAGE_ip6tables-mod-nat=y
 CONFIG_PACKAGE_iptables=y
 # CONFIG_IPTABLES_CONNLABEL is not set
@@ -5073,7 +5047,7 @@ CONFIG_PACKAGE_iptables=y
 # CONFIG_PACKAGE_iptables-mod-cluster is not set
 # CONFIG_PACKAGE_iptables-mod-clusterip is not set
 # CONFIG_PACKAGE_iptables-mod-condition is not set
-CONFIG_PACKAGE_iptables-mod-conntrack-extra=y
+# CONFIG_PACKAGE_iptables-mod-conntrack-extra is not set
 # CONFIG_PACKAGE_iptables-mod-delude is not set
 # CONFIG_PACKAGE_iptables-mod-dhcpmac is not set
 # CONFIG_PACKAGE_iptables-mod-dnetmap is not set
@@ -5085,7 +5059,7 @@ CONFIG_PACKAGE_iptables-mod-fullconenat=y
 # CONFIG_PACKAGE_iptables-mod-hashlimit is not set
 # CONFIG_PACKAGE_iptables-mod-iface is not set
 # CONFIG_PACKAGE_iptables-mod-ipmark is not set
-CONFIG_PACKAGE_iptables-mod-ipopt=y
+# CONFIG_PACKAGE_iptables-mod-ipopt is not set
 # CONFIG_PACKAGE_iptables-mod-ipp2p is not set
 # CONFIG_PACKAGE_iptables-mod-iprange is not set
 # CONFIG_PACKAGE_iptables-mod-ipsec is not set
@@ -5095,7 +5069,7 @@ CONFIG_PACKAGE_iptables-mod-ipopt=y
 # CONFIG_PACKAGE_iptables-mod-logmark is not set
 # CONFIG_PACKAGE_iptables-mod-lscan is not set
 # CONFIG_PACKAGE_iptables-mod-lua is not set
-# CONFIG_PACKAGE_iptables-mod-nat-extra is not set
+CONFIG_PACKAGE_iptables-mod-nat-extra=y
 # CONFIG_PACKAGE_iptables-mod-nflog is not set
 # CONFIG_PACKAGE_iptables-mod-nfqueue is not set
 # CONFIG_PACKAGE_iptables-mod-physdev is not set
@@ -5355,7 +5329,7 @@ CONFIG_OPENLDAP_DEBUG=y
 # CONFIG_PACKAGE_smcroute is not set
 # CONFIG_PACKAGE_ss is not set
 # CONFIG_PACKAGE_sslh is not set
-CONFIG_PACKAGE_tc=y
+# CONFIG_PACKAGE_tc is not set
 # CONFIG_PACKAGE_tcpproxy is not set
 # CONFIG_PACKAGE_vis is not set
 # CONFIG_PACKAGE_yggdrasil is not set
@@ -5722,7 +5696,7 @@ CONFIG_PACKAGE_uwsgi-syslog-plugin=y
 # CONFIG_PACKAGE_iperf3 is not set
 # CONFIG_PACKAGE_iperf3-ssl is not set
 # CONFIG_PACKAGE_ipip is not set
-CONFIG_PACKAGE_ipset=y
+# CONFIG_PACKAGE_ipset is not set
 # CONFIG_PACKAGE_ipset-dns is not set
 # CONFIG_PACKAGE_iptraf-ng is not set
 # CONFIG_PACKAGE_iputils-arping is not set
@@ -5745,7 +5719,7 @@ CONFIG_PACKAGE_ipset=y
 # CONFIG_PACKAGE_krb5-libs is not set
 # CONFIG_PACKAGE_krb5-server is not set
 # CONFIG_PACKAGE_krb5-server-extras is not set
-CONFIG_PACKAGE_libipset=y
+# CONFIG_PACKAGE_libipset is not set
 # CONFIG_PACKAGE_libndp is not set
 # CONFIG_PACKAGE_linknx is not set
 # CONFIG_PACKAGE_lynx is not set
@@ -5841,7 +5815,6 @@ CONFIG_PACKAGE_ppp-mod-pppoe=y
 # CONFIG_PACKAGE_seafile-server is not set
 # CONFIG_PACKAGE_ser2net is not set
 # CONFIG_PACKAGE_simple-adblock is not set
-CONFIG_PACKAGE_smartdns=y
 # CONFIG_PACKAGE_smartsnmpd is not set
 # CONFIG_PACKAGE_snmp-mibs is not set
 # CONFIG_PACKAGE_snmp-utils is not set
@@ -6298,7 +6271,7 @@ CONFIG_PACKAGE_libjson-script=y
 # CONFIG_PACKAGE_openobex-apps is not set
 # CONFIG_PACKAGE_openocd is not set
 # CONFIG_PACKAGE_opensc-utils is not set
-# CONFIG_PACKAGE_openssl-util is not set
+CONFIG_PACKAGE_openssl-util=y
 # CONFIG_PACKAGE_openzwave is not set
 # CONFIG_PACKAGE_openzwave-config is not set
 # CONFIG_PACKAGE_owipcalc is not set
