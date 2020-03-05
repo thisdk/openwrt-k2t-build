@@ -16,7 +16,7 @@
 
 现在我编译的版本只有fullconenat,5.0.2.0-wifi,算是纯净版吧.感觉其他那些东西在k2p的性能下.都做得不太好.
 
-smartdns还是手动装吧,可以升级可以卸载.aliddns也编译了.不过固件里,可以Artifacts里面下载.
+smartdns还是手动装吧,可以升级可以卸载.aliddns也编译了.不过没编译进固件里,可以Artifacts里面下载.
 
 ### KMS的集成问题.
 
