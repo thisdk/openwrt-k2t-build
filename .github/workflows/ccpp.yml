@@ -12,7 +12,7 @@ jobs:
     - name: Checkout - clone repository
       uses: actions/checkout@v1
     - name: Install - system build dependencies
-      run: sudo apt install -y subversion build-essential libncurses5-dev zlib1g-dev gawk git ccache gettext libssl-dev xsltproc zip
+      run: sudo apt-get install subversion build-essential libncurses5-dev zlib1g-dev gawk git ccache gettext libssl-dev xsltproc zip
     - name: Download - openwrt source download
       run: |
         wget $URL
