@@ -28,11 +28,10 @@ jobs:
     - name: Clone - openwrt plugin source
       run: |
         cd openwrt-$VERSION
-        git clone https://github.com/LGA1150/openwrt-fullconenat package/fullconenat
-        git clone https://github.com/thisdk/mtk-openwrt-mt7615-k2p.git package/mtk-openwrt-mt7615-k2p
+        git clone https://github.com/LGA1150/openwrt-fullconenat.git package/fullconenat
         git clone https://github.com/honwen/luci-app-aliddns.git package/luci-app-aliddns
     - name: Config - copy k2p build config
-      run: cp ./.config.19.07.2.release openwrt-$VERSION/.config
+      run: cp ./.config.19.07.2.mt7615e openwrt-$VERSION/.config
     - name: Download - openwrt build dependencies
       run: |
         cd openwrt-$VERSION
