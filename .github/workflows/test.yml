@@ -28,6 +28,8 @@ jobs:
         ./scripts/feeds install -a
     - name: Clone - openwrt plugin source
       run: |
+        wget https://github.com/vernesong/OpenClash/releases/download/v0.36.12-beta/clash-linux-mipsle-softfloat.tar.gz
+        tar zxf clash-linux-mipsle-softfloat.tar.gz
         cd openwrt-$VERSION
         git clone https://github.com/thisdk/openwrt-vlmcsd.git package/openwrt-vlmcsd
         git clone https://github.com/thisdk/luci-app-vlmcsd.git package/luci-app-vlmcsd
@@ -36,6 +38,7 @@ jobs:
         git clone https://github.com/honwen/luci-app-aliddns.git package/luci-app-aliddns
         git clone https://github.com/thisdk/mtk-openwrt-mt7615-k2p.git package/mtk-openwrt-mt7615-k2p
         git clone https://github.com/pymumu/smartdns.git ../smartdns && cp -r ../smartdns/package/openwrt/ ./package/openwrt-smartdns
+        mkdir -p ./files/etc/openclash && mv ../clash ./files/etc/openclash/clash && chmod 755 ./files/etc/openclash/clash
     - name: Config - copy k2p build config
       run: cp ./.config.18.06.8.test openwrt-$VERSION/.config
     - name: Download - openwrt build dependencies
