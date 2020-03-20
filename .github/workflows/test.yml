@@ -1,0 +1,53 @@
+
+name: OpenWrt K2P CI Test
+on:
+  push:
+    branches: [ master ]
+jobs:
+  build:
+    runs-on: ubuntu-18.04
+    env:
+      VERSION: 18.06.8
+      URL: https://github.com/openwrt/openwrt/archive/v18.06.8.tar.gz
+    steps:
+    - name: Checkout - clone repository
+      uses: actions/checkout@v1
+    - name: Install - system build dependencies
+      run: sudo apt-get install subversion build-essential libncurses5-dev zlib1g-dev gawk git ccache gettext libssl-dev xsltproc zip
+    - name: Download - openwrt source download
+      run: |
+        wget $URL
+        tar -zxf v$VERSION.tar.gz
+    - name: Update - openwrt source update
+      run: |
+        cd openwrt-$VERSION
+        ./scripts/feeds update -a
+    - name: Install - openwrt source install
+      run: |
+        cd openwrt-$VERSION
+        ./scripts/feeds install -a
+    - name: Clone - openwrt plugin source
+      run: |
+        cd openwrt-$VERSION
+        git clone https://github.com/thisdk/openwrt-vlmcsd.git package/openwrt-vlmcsd
+        git clone https://github.com/thisdk/luci-app-vlmcsd.git package/luci-app-vlmcsd
+        git clone https://github.com/vernesong/OpenClash.git package/luci-app-openclash
+        git clone https://github.com/LGA1150/openwrt-fullconenat.git package/fullconenat
+        git clone https://github.com/honwen/luci-app-aliddns.git package/luci-app-aliddns
+        git clone https://github.com/thisdk/mtk-openwrt-mt7615-k2p.git package/mtk-openwrt-mt7615-k2p
+        git clone https://github.com/pymumu/smartdns.git ../smartdns && cp -r ../smartdns/package/openwrt/ ./package/openwrt-smartdns
+    - name: Config - copy k2p build config
+      run: cp ./.config.18.06.8.test openwrt-$VERSION/.config
+    - name: Download - openwrt build dependencies
+      run: |
+        cd openwrt-$VERSION
+        make download -j10
+    - name: Build - make openwrt source
+      run: |
+        cd openwrt-$VERSION
+        make -j4
+    - name: Upload - push to artifact file
+      uses: actions/upload-artifact@v1
+      with:
+        name: openwrt-k2p-build-bin
+        path: openwrt-${{ env.VERSION }}/bin/
