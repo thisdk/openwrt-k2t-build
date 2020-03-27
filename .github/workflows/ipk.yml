@@ -22,6 +22,10 @@ jobs:
       run: |
         cd $SDK_NAME
         git clone https://github.com/flytosky-f/openwrt-vlmcsd.git package/openwrt-vlmcsd
+    - name: Make - make default config
+      run: |
+        cd $SDK_NAME
+        make defconfig
     - name: Build - make openwrt plugin
       run: |
         cd $SDK_NAME
