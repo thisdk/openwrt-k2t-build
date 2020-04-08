@@ -32,6 +32,8 @@ jobs:
       run: |
         cd $SDK_NAME
         make package/openwrt-vlmcsd/compile V=99
+        make package/openwrt-smartdns/compile V=99
+        make package/luci-app-smartdns/compile V=99
     - name: Upload - push to artifact file
       uses: actions/upload-artifact@v1
       with:
