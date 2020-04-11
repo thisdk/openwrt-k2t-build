@@ -22,8 +22,10 @@ jobs:
       run: |
         cd $SDK_NAME
         git clone https://github.com/flytosky-f/openwrt-vlmcsd.git package/openwrt-vlmcsd
-        git clone https://github.com/pymumu/openwrt-smartdns.git package/openwrt-smartdns
-        git clone https://github.com/pymumu/luci-app-smartdns.git package/luci-app-smartdns
+        git clone https://github.com/pymumu/openwrt-smartdns.git feeds/packages/net/openwrt-smartdns
+        ./scripts/feeds install package -a
+        git clone https://github.com/pymumu/luci-app-smartdns.git feeds/luci/applications/luci-app-smartdns
+        ./scripts/feeds install luci -a
     - name: Make - make default config
       run: |
         cd $SDK_NAME
@@ -32,8 +34,8 @@ jobs:
       run: |
         cd $SDK_NAME
         make package/openwrt-vlmcsd/compile V=99
-        make package/openwrt-smartdns/compile V=99
-        make package/luci-app-smartdns/compile V=99
+        make package/feeds/luci/applications/luci-app-smartdns/compile
+        make package/feeds/packages/smartdns/compile
     - name: Upload - push to artifact file
       uses: actions/upload-artifact@v1
       with:
