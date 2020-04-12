@@ -21,7 +21,7 @@ jobs:
     - name: Clone - openwrt plugin source
       run: |
         cd $SDK_NAME
-        git clone https://github.com/pymumu/openwrt-smartdns.git feeds/packages/net/openwrt-smartdns
+        git clone https://github.com/thisdk/openwrt-smartdns.git feeds/packages/net/openwrt-smartdns
         ./scripts/feeds install package -a
     - name: Make - make default config
       run: |
