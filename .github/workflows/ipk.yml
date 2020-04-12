@@ -22,7 +22,8 @@ jobs:
       run: |
         cd $SDK_NAME
         git clone https://github.com/thisdk/openwrt-smartdns.git feeds/packages/net/openwrt-smartdns
-        ./scripts/feeds install package -a
+        ./scripts/feeds update -a
+        ./scripts/feeds install -a
     - name: Make - make default config
       run: |
         cd $SDK_NAME
@@ -30,7 +31,7 @@ jobs:
     - name: Build - make openwrt plugin
       run: |
         cd $SDK_NAME
-        make package/feeds/packages/smartdns/compile V=s
+        make package/feeds/packages/smartdns/compile
     - name: Upload - push to artifact file
       uses: actions/upload-artifact@v1
       with:
