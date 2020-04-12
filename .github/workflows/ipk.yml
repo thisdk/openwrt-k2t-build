@@ -30,7 +30,7 @@ jobs:
     - name: Build - make openwrt plugin
       run: |
         cd $SDK_NAME
-        make package/feeds/packages/smartdns/compile
+        make package/feeds/packages/smartdns/compile V=s
     - name: Upload - push to artifact file
       uses: actions/upload-artifact@v1
       with:
