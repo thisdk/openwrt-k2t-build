@@ -15,23 +15,34 @@ jobs:
     - name: Download - openwrt source download
       run: |
         git clone -b openwrt-19.07 https://git.openwrt.org/openwrt/openwrt.git openwrt-$VERSION
-    - name: Update - openwrt source update
-      run: |
-        cd openwrt-$VERSION
-        ./scripts/feeds update -a
-    - name: Install - openwrt source install
-      run: |
-        cd openwrt-$VERSION
-        ./scripts/feeds install -a
     - name: Replace - openwrt version replace
       run: |
         cd openwrt-$VERSION
         sed -i 's/-SNAPSHOT/.2/g' include/version.mk
+    - name: Update - source update install
+      run: |
+        cd openwrt-$VERSION
+        ./scripts/feeds update -a
+        ./scripts/feeds install -a
+    - name: Delete - remove shadowsocks plugin
+      run: |
+        cd openwrt-$VERSION
+        rm -rf feeds/luci/applications/luci-app-shadowsocks-libev
+        rm -rf feeds/luci.tmp/info/.packageinfo-applications_luci-app-shadowsocks-libev
+        rm -rf feeds/packages/net/shadowsocks-libev
+        rm -rf feeds/packages.tmp/info/.packageinfo-net_shadowsocks-libev
+        rm -rf package/feeds/luci/luci-app-shadowsocks-libev
+        rm -rf package/feeds/packages/shadowsocks-libev
     - name: Clone - openwrt plugin source
       run: |
         cd openwrt-$VERSION
-        git clone https://github.com/LGA1150/openwrt-fullconenat package/fullconenat
+        git clone https://github.com/LGA1150/openwrt-fullconenat.git package/fullconenat
         git clone https://github.com/honwen/luci-app-aliddns.git package/luci-app-aliddns
+        git clone https://github.com/flytosky-f/openwrt-vlmcsd.git package/openwrt-vlmcsd
+        git clone https://github.com/thisdk/openwrt-smartdns.git package/smartdns
+        git clone https://github.com/thisdk/luci-app-smartdns.git package/luci-app-smartdns
+        git clone https://github.com/thisdk/openwrt-simple-obfs.git package/openwrt-simple-obfs
+        git clone https://github.com/shadowsocks/openwrt-shadowsocks.git package/openwrt-shadowsocks
     - name: Config - copy k2p build config
       run: cp ./.config.19.07.2.release openwrt-$VERSION/.config
     - name: Download - openwrt build dependencies
