@@ -24,6 +24,15 @@ jobs:
         cd openwrt-$VERSION
         ./scripts/feeds update -a
         ./scripts/feeds install -a
+    - name: Delete - remove shadowsocks plugin
+      run: |
+        cd openwrt-$VERSION
+        rm -rf feeds/luci/applications/luci-app-shadowsocks-libev
+        rm -rf feeds/luci.tmp/info/.packageinfo-applications_luci-app-shadowsocks-libev
+        rm -rf feeds/packages/net/shadowsocks-libev
+        rm -rf feeds/packages.tmp/info/.packageinfo-net_shadowsocks-libev
+        rm -rf package/feeds/luci/luci-app-shadowsocks-libev
+        rm -rf package/feeds/packages/shadowsocks-libev
     - name: Clone - openwrt plugin source
       run: |
         cd openwrt-$VERSION
