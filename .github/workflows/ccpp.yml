@@ -1,0 +1,63 @@
+name: OpenWrt K2P CI	
+on:	
+  release:	
+    types: [created]	
+jobs:	
+  build:	
+    runs-on: ubuntu-18.04	
+    env:	
+      VERSION: 19.07.2	
+    steps:	
+    - name: Checkout - clone repository	
+      uses: actions/checkout@v1
+    - name: Install - system build dependencies	
+      run: sudo apt-get install subversion build-essential libncurses5-dev zlib1g-dev gawk git ccache gettext libssl-dev xsltproc zip	
+    - name: Download - openwrt source download
+      run: |
+        git clone -b openwrt-19.07 https://git.openwrt.org/openwrt/openwrt.git openwrt-$VERSION
+    - name: Replace - openwrt version replace
+      run: |
+        cd openwrt-$VERSION
+        sed -i 's/-SNAPSHOT/.2/g' include/version.mk
+    - name: Update - source update install
+      run: |	
+        cd openwrt-$VERSION	
+        ./scripts/feeds update -a	
+        ./scripts/feeds install -a	
+    - name: Clone - openwrt plugin source	
+      run: |	
+        cd openwrt-$VERSION	
+        git clone https://github.com/LGA1150/openwrt-fullconenat.git package/fullconenat
+        git clone https://github.com/honwen/luci-app-aliddns.git package/luci-app-aliddns
+        git clone https://github.com/flytosky-f/openwrt-vlmcsd.git package/openwrt-vlmcsd
+        git clone https://github.com/thisdk/openwrt-smartdns.git package/smartdns
+        git clone https://github.com/thisdk/luci-app-smartdns.git package/luci-app-smartdns
+        git clone https://github.com/thisdk/openwrt-simple-obfs.git package/openwrt-simple-obfs
+        git clone https://github.com/shadowsocks/openwrt-shadowsocks.git package/openwrt-shadowsocks
+    - name: Config - copy k2p build config	
+      run: cp ./.config.19.07.2.release openwrt-$VERSION/.config	
+    - name: Download - openwrt build dependencies	
+      run: |	
+        cd openwrt-$VERSION	
+        make download -j12	
+    - name: Build - make openwrt source	
+      run: |	
+        cd openwrt-$VERSION	
+        make -j6	
+    - name: Upload - push to artifact file	
+      uses: actions/upload-artifact@v1	
+      with:	
+        name: openwrt-k2p-build-bin	
+        path: openwrt-${{ env.VERSION }}/bin/	
+    - name: Remove - delete packages files	
+      run: |	
+        cd openwrt-$VERSION/bin/targets/ramips/mt7621/	
+        rm -rf packages/	
+        ls -hl	
+    - name: Release - push to release file	
+      uses: softprops/action-gh-release@v1	
+      if: startsWith(github.ref, 'refs/tags/')	
+      with:	
+        files: openwrt-${{ env.VERSION }}/bin/targets/ramips/mt7621/*	
+      env:	
+        GITHUB_TOKEN: ${{ secrets.RELEASES_DEPLOY_TOKEN }}	
