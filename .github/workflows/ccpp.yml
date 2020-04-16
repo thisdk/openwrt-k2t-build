@@ -39,8 +39,6 @@ jobs:
         git clone https://github.com/LGA1150/openwrt-fullconenat.git package/fullconenat
         git clone https://github.com/honwen/luci-app-aliddns.git package/luci-app-aliddns
         git clone https://github.com/flytosky-f/openwrt-vlmcsd.git package/openwrt-vlmcsd
-        git clone https://github.com/thisdk/openwrt-smartdns.git package/smartdns
-        git clone https://github.com/thisdk/luci-app-smartdns.git package/luci-app-smartdns
         git clone https://github.com/thisdk/openwrt-simple-obfs.git package/openwrt-simple-obfs
         git clone https://github.com/shadowsocks/openwrt-shadowsocks.git package/openwrt-shadowsocks
     - name: Config - copy k2p build config
