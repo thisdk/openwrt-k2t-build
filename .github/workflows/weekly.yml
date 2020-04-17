@@ -11,7 +11,7 @@ jobs:
     - name: Checkout - clone repository
       uses: actions/checkout@v1
     - name: Install - system build dependencies
-      run: sudo apt install subversion build-essential libncurses5-dev zlib1g-dev gawk git ccache gettext libssl-dev xsltproc zip
+      run: sudo apt-get install subversion build-essential libncurses5-dev zlib1g-dev gawk git ccache gettext libssl-dev xsltproc zip
     - name: Download - openwrt source download
       run: |
         git clone -b openwrt-19.07 https://git.openwrt.org/openwrt/openwrt.git openwrt-$VERSION
