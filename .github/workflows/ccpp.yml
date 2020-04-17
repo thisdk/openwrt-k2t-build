@@ -8,23 +8,23 @@ jobs:
     env:
       VERSION: 19.07.2
     steps:
-    - name: Checkout - clone repository
+    - name: 00 - clone repository
       uses: actions/checkout@v1
-    - name: Install - system build dependencies
+    - name: 01 - system build dependencies
       run: sudo apt-get install subversion build-essential libncurses5-dev zlib1g-dev gawk git ccache gettext libssl-dev xsltproc zip
-    - name: Download - openwrt source download
+    - name: 02 - openwrt source download
       run: |
         git clone -b openwrt-19.07 https://git.openwrt.org/openwrt/openwrt.git openwrt-$VERSION
-    - name: Replace - openwrt version replace
+    - name: 03 - openwrt version replace
       run: |
         cd openwrt-$VERSION
         sed -i 's/-SNAPSHOT/.2/g' include/version.mk
-    - name: Update - source update install
+    - name: 04 - source update install
       run: |
         cd openwrt-$VERSION
         ./scripts/feeds update -a
         ./scripts/feeds install -a
-    - name: Delete - remove shadowsocks plugin
+    - name: 05 - remove shadowsocks plugin
       run: |
         cd openwrt-$VERSION
         rm -rf feeds/luci/applications/luci-app-shadowsocks-libev
@@ -33,7 +33,7 @@ jobs:
         rm -rf feeds/packages.tmp/info/.packageinfo-net_shadowsocks-libev
         rm -rf package/feeds/luci/luci-app-shadowsocks-libev
         rm -rf package/feeds/packages/shadowsocks-libev
-    - name: Clone - openwrt plugin source
+    - name: 06 - openwrt plugin source
       run: |
         cd openwrt-$VERSION
         git clone https://github.com/LGA1150/openwrt-fullconenat.git package/fullconenat
@@ -42,27 +42,27 @@ jobs:
         git clone https://github.com/thisdk/openwrt-simple-obfs.git package/simple-obfs
         git clone https://github.com/shadowsocks/openwrt-shadowsocks.git package/shadowsocks
         git clone https://github.com/zhfreal/openwrt-udp2raw.git package/udp2raw
-    - name: Config - copy k2p build config
+    - name: 07 - copy k2p build config
       run: cp ./.config.19.07.2.release openwrt-$VERSION/.config
-    - name: Download - openwrt build dependencies
+    - name: 08 - openwrt build dependencies
       run: |
         cd openwrt-$VERSION
         make download -j12
-    - name: Build - make openwrt source
+    - name: 09 - make openwrt source
       run: |
         cd openwrt-$VERSION
         make -j6
-    - name: Upload - push to artifact file
+    - name: 10 - push to artifact file
       uses: actions/upload-artifact@v1
       with:
         name: openwrt-k2p-build-bin
         path: openwrt-${{ env.VERSION }}/bin/
-    - name: Remove - delete packages files
+    - name: 11 - delete packages files
       run: |
         cd openwrt-$VERSION/bin/targets/ramips/mt7621/
         rm -rf packages/
         ls -hl
-    - name: Release - push to release file
+    - name: 12 - push to release file
       uses: softprops/action-gh-release@v1
       if: startsWith(github.ref, 'refs/tags/')
       with:
