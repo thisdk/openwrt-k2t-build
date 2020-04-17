@@ -41,6 +41,7 @@ jobs:
         git clone https://github.com/flytosky-f/openwrt-vlmcsd.git package/vlmcsd
         git clone https://github.com/thisdk/openwrt-simple-obfs.git package/simple-obfs
         git clone https://github.com/shadowsocks/openwrt-shadowsocks.git package/shadowsocks
+        git clone https://github.com/zhfreal/openwrt-udp2raw.git package/udp2raw
     - name: Config - copy k2p build config
       run: cp ./.config.19.07.2.release openwrt-$VERSION/.config
     - name: Download - openwrt build dependencies
