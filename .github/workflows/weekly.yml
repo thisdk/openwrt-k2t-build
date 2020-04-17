@@ -8,7 +8,7 @@ jobs:
     env:
       VERSION: 19.07.2
     steps:
-    - name: Checkout - clone repository
+    - name: 00 - clone repository
       uses: actions/checkout@v1
     - name: 01 - system build dependencies
       run: sudo apt-get install subversion build-essential libncurses5-dev zlib1g-dev gawk git ccache gettext libssl-dev xsltproc zip
