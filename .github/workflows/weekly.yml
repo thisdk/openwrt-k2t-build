@@ -6,7 +6,7 @@ jobs:
   build:
     runs-on: ubuntu-18.04
     env:
-      VERSION: 19.07.2
+      VERSION: 19.07.3
     steps:
     - name: 00 - clone repository
       uses: actions/checkout@v1
@@ -18,7 +18,7 @@ jobs:
     - name: 03 - openwrt version replace
       run: |
         cd openwrt-$VERSION
-        sed -i 's/-SNAPSHOT/.2/g' include/version.mk
+        sed -i 's/-SNAPSHOT/.3/g' include/version.mk
     - name: 04 - source update install
       run: |
         cd openwrt-$VERSION
