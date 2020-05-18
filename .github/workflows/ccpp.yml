@@ -41,7 +41,7 @@ jobs:
         git clone https://github.com/shadowsocks/openwrt-shadowsocks.git package/shadowsocks
         git clone https://github.com/zhfreal/openwrt-udp2raw.git package/udp2raw
     - name: 06 - copy k2p build config
-      run: cp ./.config.19.07.2.release openwrt-$VERSION/.config
+      run: cp ./.config.19.07.3.release openwrt-$VERSION/.config
     - name: 07 - openwrt build dependencies
       run: |
         cd openwrt-$VERSION
