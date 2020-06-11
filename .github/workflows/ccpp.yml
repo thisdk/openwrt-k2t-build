@@ -1,9 +1,12 @@
 name: OpenWrt K2P CI
+
 on:
   release:
     types: [created]
+
 jobs:
-  none:
+
+  none_job:
     runs-on: ubuntu-18.04
     env:
       VERSION: 19.07.3
@@ -71,7 +74,9 @@ jobs:
         files: openwrt-${{ env.VERSION }}/bin/targets/ramips/mt7621/*
       env:
         GITHUB_TOKEN: ${{ secrets.RELEASES_DEPLOY_TOKEN }}
-  full:
+
+full_job:
+  build:
     runs-on: ubuntu-18.04
     env:
       VERSION: 19.07.3
@@ -139,7 +144,8 @@ jobs:
         files: openwrt-${{ env.VERSION }}/bin/targets/ramips/mt7621/*
       env:
         GITHUB_TOKEN: ${{ secrets.RELEASES_DEPLOY_TOKEN }}
-  full.mt7615e:
+
+  mt7615e_job:
     runs-on: ubuntu-18.04
     env:
       VERSION: 19.07.3
