@@ -75,8 +75,7 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.RELEASES_DEPLOY_TOKEN }}
 
-full_job:
-  build:
+  full_job:
     runs-on: ubuntu-18.04
     env:
       VERSION: 19.07.3
