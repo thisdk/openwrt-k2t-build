@@ -3,7 +3,7 @@ on:
   release:
     types: [created]
 jobs:
-  none:
+  mt7615:
     runs-on: ubuntu-18.04
     env:
       VERSION: master
@@ -14,7 +14,7 @@ jobs:
       run: sudo apt-get install subversion build-essential libncurses5-dev zlib1g-dev gawk git ccache gettext libssl-dev xsltproc zip
     - name: 02 - openwrt source download
       run: |
-        git clone git clone https://git.openwrt.org/openwrt/openwrt.git openwrt-$VERSION
+        git clone https://git.openwrt.org/openwrt/openwrt.git openwrt-$VERSION
     - name: 03 - source update install
       run: |
         cd openwrt-$VERSION
