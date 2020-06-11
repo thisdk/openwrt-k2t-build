@@ -197,7 +197,7 @@ jobs:
     - name: 09 - push to artifact file
       uses: actions/upload-artifact@v1
       with:
-        name: openwrt-k2p-build-full.mt7615e
+        name: openwrt-k2p-build-full-mt7615e
         path: openwrt-${{ env.VERSION }}/bin/
     - name: 10 - delete packages files
       run: |
