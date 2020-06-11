@@ -44,8 +44,6 @@ jobs:
         git clone https://github.com/shadowsocks/openwrt-shadowsocks.git package/shadowsocks
         git clone https://github.com/zhfreal/openwrt-udp2raw.git package/udp2raw
         git clone https://github.com/jerrykuku/luci-theme-argon.git package/luci-theme-argon
-        git clone https://github.com/z826540272/openwrt-smartdns.git package/smartdns
-        git clone -b lede https://github.com/pymumu/luci-app-smartdns.git package/luci-app-smartdns
     - name: 06 - copy k2p build config
       run: cp ./.config.19.07.03.none openwrt-$VERSION/.config
     - name: 07 - openwrt build dependencies
