@@ -3,7 +3,7 @@ on:
   release:
     types: [created]
 jobs:
-  full:	
+  build:	
     runs-on: ubuntu-18.04	
     env:	
       VERSION: 19.07.3	
