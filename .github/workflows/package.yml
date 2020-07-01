@@ -58,15 +58,3 @@ jobs:
       with:	
         name: openwrt-k2p-build	
         path: openwrt-${{ env.VERSION }}/bin/	
-    - name: 09 - delete packages files	
-      run: |	
-        cd openwrt-$VERSION/bin/targets/ramips/mt7621/	
-        rm -rf packages/
-        ls -hl
-    - name: 10 - push to release file	
-      uses: softprops/action-gh-release@v1	
-      if: startsWith(github.ref, 'refs/tags/')	
-      with:	
-        files: openwrt-${{ env.VERSION }}/bin/targets/ramips/mt7621/*	
-      env:	
-        GITHUB_TOKEN: ${{ secrets.RELEASES_DEPLOY_TOKEN }}
