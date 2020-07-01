@@ -18,8 +18,8 @@ jobs:
     - name: 03 - build openwrt package	
       run: |	
         cd openwrt-sdk-19.07.3-ramips-mt7621_gcc-7.5.0_musl.Linux-x86_64
-        ./scripts/feeds update -a	
-        ./scripts/feeds install -a
+        ./scripts/feeds update package -a
+        ./scripts/feeds install package -a
         git clone https://github.com/shadowsocks/openwrt-shadowsocks.git package/shadowsocks
         make config/menuconfig
         make package/shadowsocks-libev/compile V=99
