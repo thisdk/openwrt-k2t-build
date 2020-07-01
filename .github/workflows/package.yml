@@ -3,7 +3,7 @@ on:
   watch:
     types: started
 jobs:
-  k2p:	
+  build:	
     runs-on: ubuntu-18.04	
     steps:	
     - name: 00 - clone repository	
@@ -19,5 +19,5 @@ jobs:
       run: |	
         cd openwrt-sdk-19.07.3-ramips-mt7621_gcc-7.5.0_musl.Linux-x86_64
         git clone https://github.com/shadowsocks/openwrt-shadowsocks.git package/shadowsocks
-        make defconfig
+        make config/menuconfig
         make package/shadowsocks-libev/compile V=99
