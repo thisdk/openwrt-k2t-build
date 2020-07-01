@@ -1,0 +1,23 @@
+name: OpenWrt Package CI
+on:
+  release:
+    types: [created]
+jobs:
+  k2p:	
+    runs-on: ubuntu-18.04	
+    steps:	
+    - name: 00 - clone repository	
+      uses: actions/checkout@v1	
+    - name: 01 - system build dependencies	
+      run: sudo apt-get install subversion build-essential libncurses5-dev zlib1g-dev gawk git ccache gettext libssl-dev xsltproc zip	
+    - name: 02 - openwrt source download	
+      run: |	
+        wget https://downloads.openwrt.org/releases/19.07.3/targets/ramips/mt7621/openwrt-sdk-19.07.3-ramips-mt7621_gcc-7.5.0_musl.Linux-x86_64.tar.xz
+        xz -d openwrt-sdk-19.07.3-ramips-mt7621_gcc-7.5.0_musl.Linux-x86_64.tar.xz
+        tar xf openwrt-sdk-19.07.3-ramips-mt7621_gcc-7.5.0_musl.Linux-x86_64.tar
+    - name: 03 - build openwrt package	
+      run: |	
+        cd openwrt-sdk-19.07.3-ramips-mt7621_gcc-7.5.0_musl.Linux-x86_64
+        git clone https://github.com/shadowsocks/openwrt-shadowsocks.git package/shadowsocks
+        make defconfig
+        make package/shadowsocks-libev/compile V=99
