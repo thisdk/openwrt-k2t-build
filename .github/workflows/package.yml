@@ -1,7 +1,7 @@
 name: OpenWrt Package CI
 on:
-  release:
-    types: [created]
+  watch:
+    types: started
 jobs:
   k2p:	
     runs-on: ubuntu-18.04	
