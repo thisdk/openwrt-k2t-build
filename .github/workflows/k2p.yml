@@ -1,4 +1,4 @@
-name: OpenWrt CI
+name: OpenWrt K2P CI
 on:
   release:
     types: [created]
