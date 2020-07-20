@@ -1,0 +1,13 @@
+#!/bin/sh /etc/rc.common
+
+START=99
+SERVICE_DAEMONIZE=1
+
+start() {
+	service_start /usr/bin/ss-server -s 0.0.0.0 -p 1082 -k main! -m rc4-md5 --fast-open -u --plugin obfs-server --plugin-opts obfs=http -f /tmp/ss-server-ml.pid
+}
+
+stop() {
+	service_stop /usr/bin/ss-server
+}
+
