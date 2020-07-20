@@ -40,7 +40,8 @@ jobs:
         git clone https://github.com/thisdk/openwrt-simple-obfs.git package/simple-obfs	
         git clone https://github.com/shadowsocks/openwrt-shadowsocks.git package/shadowsocks	
         git clone https://github.com/shadowsocks/luci-app-shadowsocks.git package/luci-app-shadowsocks	
-        git clone https://github.com/zhfreal/openwrt-udp2raw.git package/udp2raw	
+        git clone https://github.com/thisdk/openwrt-udp2raw.git package/udp2raw
+        git clone https://github.com/OokamiRyou/luci-app-udp2raw.git package/luci-app-udp2raw
         git clone https://github.com/z826540272/openwrt-smartdns.git package/smartdns	
     - name: 06 - copy k2p build config	
       run: cp ./.config.19.07.03.k2p openwrt-$VERSION/.config	
