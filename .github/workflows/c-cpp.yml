@@ -49,7 +49,10 @@ jobs:
         chmod 755 openwrt/files/etc/init.d/telecom_traffic
     - name: 07 - openwrt build dependencies	
       run: |	
-        cd openwrt	
+        cd openwrt
+        ./scripts/diffconfig.sh > configdiff
+        cp configdiff .config
+        make defconfig;make oldconfig
         make download -j12	
     - name: 08 - make openwrt source	
       run: |	
