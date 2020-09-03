@@ -42,7 +42,6 @@ jobs:
         git clone https://github.com/thisdk/openwrt-speederv2.git package/udpspeederv2
         git clone https://github.com/thisdk/luci-app-speederv2.git package/luci-app-speederv2
         git clone https://github.com/thisdk/openwrt-smartdns.git package/smartdns
-        git clone https://github.com/thisdk/luci-app-smartdns.git package/luci-app-smartdns
     - name: 06 - copy k2p build config	
       run: |
         cp .config openwrt/
