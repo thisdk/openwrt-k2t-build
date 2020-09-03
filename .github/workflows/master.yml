@@ -50,9 +50,6 @@ jobs:
     - name: 07 - openwrt build dependencies	
       run: |	
         cd openwrt
-        make oldconfig
-        ./scripts/diffconfig.sh > diffconfig
-        cat diffconfig >> .config
         make defconfig
         make download -j12
     - name: 08 - make openwrt source
