@@ -56,7 +56,7 @@ jobs:
     - name: 08 - make openwrt source
       run: |	
         cd openwrt
-        make -j1 V=s
+        make -j4
     - name: 09 - push to artifact file	
       uses: actions/upload-artifact@v1	
       with:	
