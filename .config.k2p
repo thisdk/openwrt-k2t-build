@@ -53,6 +53,7 @@ CONFIG_OPENSSL_WITH_TLS13=y
 CONFIG_PACKAGE_ca-bundle=y
 CONFIG_PACKAGE_cgi-io=y
 CONFIG_PACKAGE_curl=y
+# CONFIG_PACKAGE_dnsmasq is not set
 CONFIG_PACKAGE_dnsmasq-full=y
 CONFIG_PACKAGE_dnsmasq_full_auth=y
 CONFIG_PACKAGE_dnsmasq_full_conntrack=y
