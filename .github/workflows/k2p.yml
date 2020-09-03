@@ -47,7 +47,7 @@ jobs:
         git clone https://github.com/thisdk/openwrt-smartdns.git package/smartdns
     - name: 06 - copy k2p build config
       run: |
-        cp ./.config.19.07.03.k2p openwrt-$VERSION/.config
+        cp .config openwrt-$VERSION/
         cp -r ./files openwrt-$VERSION/
         chmod 755 openwrt-$VERSION/files/etc/init.d/telecom_traffic
     - name: 07 - openwrt build dependencies
