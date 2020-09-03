@@ -52,11 +52,11 @@ jobs:
       run: |	
         cd openwrt
         make defconfig
-        make download -j4
+        make download -j12
     - name: 08 - make openwrt source
       run: |	
         cd openwrt
-        make
+        make -j6
     - name: 09 - push to artifact file	
       uses: actions/upload-artifact@v1	
       with:	
