@@ -48,7 +48,7 @@ jobs:
         git clone https://github.com/thisdk/luci-app-smartdns.git package/luci-app-smartdns
     - name: 06 - copy k2p build config
       run: |
-        cp .config openwrt-$VERSION/
+        cp .config.k2p openwrt-$VERSION/.config
         cp -r ./files openwrt-$VERSION/
         chmod 755 openwrt-$VERSION/files/etc/init.d/telecom_traffic
     - name: 07 - openwrt build dependencies
