@@ -3,75 +3,76 @@ on:
   release:
     types: [created]
 jobs:
-  k2p:	
-    runs-on: ubuntu-18.04	
-    env:	
-      VERSION: 19.07.3	
-      URL: https://github.com/openwrt/openwrt/archive/v19.07.3.tar.gz	
-    steps:	
-    - name: 00 - clone repository	
-      uses: actions/checkout@v1	
-    - name: 01 - system build dependencies	
-      run: sudo apt-get install subversion build-essential libncurses5-dev zlib1g-dev gawk git ccache gettext libssl-dev xsltproc zip	
-    - name: 02 - openwrt source download	
-      run: |	
-        wget $URL	
-        tar -zxf v$VERSION.tar.gz	
-    - name: 03 - source update install	
-      run: |	
-        cd openwrt-$VERSION	
-        ./scripts/feeds update -a	
-        ./scripts/feeds install -a	
-    - name: 04 - remove shadowsocks plugin	
-      run: |	
-        cd openwrt-$VERSION	
-        rm -rf feeds/luci/applications/luci-app-shadowsocks-libev	
-        rm -rf feeds/luci.tmp/info/.packageinfo-applications_luci-app-shadowsocks-libev	
-        rm -rf feeds/packages/net/shadowsocks-libev	
-        rm -rf feeds/packages.tmp/info/.packageinfo-net_shadowsocks-libev	
-        rm -rf package/feeds/luci/luci-app-shadowsocks-libev	
-        rm -rf package/feeds/packages/shadowsocks-libev	
-    - name: 05 - openwrt plugin source	
-      run: |	
-        cd openwrt-$VERSION	
-        git clone https://github.com/LGA1150/openwrt-fullconenat.git package/fullconenat	
-        git clone https://github.com/honwen/luci-app-aliddns.git package/luci-app-aliddns	
-        git clone https://github.com/flytosky-f/openwrt-vlmcsd.git package/vlmcsd	
-        git clone https://github.com/thisdk/openwrt-simple-obfs.git package/simple-obfs	
-        git clone https://github.com/shadowsocks/openwrt-shadowsocks.git package/shadowsocks	
-        git clone https://github.com/shadowsocks/luci-app-shadowsocks.git package/luci-app-shadowsocks	
+  k2p:
+    runs-on: ubuntu-18.04
+    env:
+      VERSION: 19.07.3
+      URL: https://github.com/openwrt/openwrt/archive/v19.07.3.tar.gz
+    steps:
+    - name: 00 - clone repository
+      uses: actions/checkout@v1
+    - name: 01 - system build dependencies
+      run: sudo apt-get install subversion build-essential libncurses5-dev zlib1g-dev gawk git ccache gettext libssl-dev xsltproc zip
+    - name: 02 - openwrt source download
+      run: |
+        wget $URL
+        tar -zxf v$VERSION.tar.gz
+    - name: 03 - source update install
+      run: |
+        cd openwrt-$VERSION
+        ./scripts/feeds update -a
+        ./scripts/feeds install -a
+    - name: 04 - remove shadowsocks plugin
+      run: |
+        cd openwrt-$VERSION
+        rm -rf feeds/luci/applications/luci-app-shadowsocks-libev
+        rm -rf feeds/luci.tmp/info/.packageinfo-applications_luci-app-shadowsocks-libev
+        rm -rf feeds/packages/net/shadowsocks-libev
+        rm -rf feeds/packages.tmp/info/.packageinfo-net_shadowsocks-libev
+        rm -rf package/feeds/luci/luci-app-shadowsocks-libev
+        rm -rf package/feeds/packages/shadowsocks-libev
+    - name: 05 - openwrt plugin source
+      run: |
+        cd openwrt-$VERSION
+        git clone https://github.com/LGA1150/openwrt-fullconenat.git package/fullconenat
+        git clone https://github.com/honwen/luci-app-aliddns.git package/luci-app-aliddns
+        git clone https://github.com/flytosky-f/openwrt-vlmcsd.git package/vlmcsd
+        git clone https://github.com/thisdk/openwrt-simple-obfs.git package/simple-obfs
+        git clone https://github.com/shadowsocks/openwrt-shadowsocks.git package/shadowsocks
+        git clone https://github.com/shadowsocks/luci-app-shadowsocks.git package/luci-app-shadowsocks
         git clone https://github.com/thisdk/openwrt-udp2raw.git package/udp2raw
         git clone https://github.com/thisdk/luci-app-udp2raw.git package/luci-app-udp2raw
         git clone https://github.com/thisdk/openwrt-speederv2.git package/udpspeederv2
         git clone https://github.com/thisdk/luci-app-speederv2.git package/luci-app-speederv2
-        git clone https://github.com/thisdk/openwrt-smartdns.git package/smartdns	
-    - name: 06 - copy k2p build config	
+        git clone https://github.com/thisdk/openwrt-smartdns.git package/smartdns
+    - name: 06 - copy k2p build config
       run: |
         cp ./.config.19.07.03.k2p openwrt-$VERSION/.config
         cp -r ./files openwrt-$VERSION/
         chmod 755 openwrt-$VERSION/files/etc/init.d/telecom_traffic
-    - name: 07 - openwrt build dependencies	
-      run: |	
-        cd openwrt-$VERSION	
-        make download -j12	
-    - name: 08 - make openwrt source	
-      run: |	
-        cd openwrt-$VERSION	
-        make -j6	
-    - name: 09 - push to artifact file	
-      uses: actions/upload-artifact@v1	
-      with:	
-        name: openwrt-k2p-build	
-        path: openwrt-${{ env.VERSION }}/bin/	
-    - name: 10 - delete packages files	
-      run: |	
-        cd openwrt-$VERSION/bin/targets/ramips/mt7621/	
+    - name: 07 - openwrt build dependencies
+      run: |
+        cd openwrt-$VERSION
+        make defconfig
+        make download -j12
+    - name: 08 - make openwrt source
+      run: |
+        cd openwrt-$VERSION
+        make -j6
+    - name: 09 - push to artifact file
+      uses: actions/upload-artifact@v1
+      with:
+        name: openwrt-k2p-build
+        path: openwrt-${{ env.VERSION }}/bin/
+    - name: 10 - delete packages files
+      run: |
+        cd openwrt-$VERSION/bin/targets/ramips/mt7621/
         rm -rf packages/
         ls -hl
-    - name: 11 - push to release file	
-      uses: softprops/action-gh-release@v1	
-      if: startsWith(github.ref, 'refs/tags/')	
-      with:	
-        files: openwrt-${{ env.VERSION }}/bin/targets/ramips/mt7621/*	
-      env:	
+    - name: 11 - push to release file
+      uses: softprops/action-gh-release@v1
+      if: startsWith(github.ref, 'refs/tags/')
+      with:
+        files: openwrt-${{ env.VERSION }}/bin/targets/ramips/mt7621/*
+      env:
         GITHUB_TOKEN: ${{ secrets.RELEASES_DEPLOY_TOKEN }}
