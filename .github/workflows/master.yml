@@ -21,16 +21,7 @@ jobs:
       run: |	
         chmod 755 script.sh
         bash script.sh
-    - name: 05 - openwrt build dependencies	
-      run: |	
-        cd openwrt
-        make defconfig
-        make download -j4
-    - name: 06 - make openwrt source
-      run: |	
-        cd openwrt
-        make -j2
-    - name: 07 - push to artifact file	
+    - name: 05 - push to artifact file	
       uses: actions/upload-artifact@v1	
       with:	
         name: k2p-framework	
