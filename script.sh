@@ -32,7 +32,9 @@ git clone https://github.com/thisdk/openwrt-smartdns.git package/smartdns
 git clone https://github.com/thisdk/luci-app-smartdns.git package/luci-app-smartdns
 
 # copy build file and config
-cp .config.k2p openwrt/.config
-cp -r ./files openwrt/
-chmod 755 openwrt/files/etc/init.d/telecom_traffic
+
+cp ../config.k2p .config
+cp -r ../files ./
+chmod 755 ./files/etc/init.d/telecom_traffic
+
 
