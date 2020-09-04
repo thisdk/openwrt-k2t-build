@@ -1,0 +1,38 @@
+#!/bin/bash
+
+cd openwrt
+
+# source update and install
+
+./scripts/feeds update -a	
+./scripts/feeds install -a
+
+# remove shadowsocks plugin
+
+rm -rf feeds/luci/applications/luci-app-shadowsocks-libev	
+rm -rf feeds/luci.tmp/info/.packageinfo-applications_luci-app-shadowsocks-libev	
+rm -rf feeds/packages/net/shadowsocks-libev	
+rm -rf feeds/packages.tmp/info/.packageinfo-net_shadowsocks-libev	
+rm -rf package/feeds/luci/luci-app-shadowsocks-libev	
+rm -rf package/feeds/packages/shadowsocks-libev
+
+# clone openwrt plugin source
+
+git clone https://github.com/LGA1150/openwrt-fullconenat.git package/fullconenat	
+git clone https://github.com/honwen/luci-app-aliddns.git package/luci-app-aliddns	
+git clone https://github.com/flytosky-f/openwrt-vlmcsd.git package/vlmcsd	
+git clone https://github.com/thisdk/openwrt-simple-obfs.git package/simple-obfs	
+git clone https://github.com/shadowsocks/openwrt-shadowsocks.git package/shadowsocks	
+git clone https://github.com/shadowsocks/luci-app-shadowsocks.git package/luci-app-shadowsocks	
+git clone https://github.com/thisdk/openwrt-udp2raw.git package/udp2raw
+git clone https://github.com/thisdk/luci-app-udp2raw.git package/luci-app-udp2raw
+git clone https://github.com/thisdk/openwrt-speederv2.git package/udpspeederv2
+git clone https://github.com/thisdk/luci-app-speederv2.git package/luci-app-speederv2
+git clone https://github.com/thisdk/openwrt-smartdns.git package/smartdns
+git clone https://github.com/thisdk/luci-app-smartdns.git package/luci-app-smartdns
+
+# copy build file and config
+cp .config.k2p openwrt/.config
+cp -r ./files openwrt/
+chmod 755 openwrt/files/etc/init.d/telecom_traffic
+
