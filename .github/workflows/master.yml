@@ -13,24 +13,24 @@ jobs:
     - name: 02 - clone openwrt source
       run: |	
         git clone -b openwrt-19.07 https://git.openwrt.org/openwrt/openwrt.git
-    - name: 03 - source update install	
+    - name: 03 - version replace	
       run: |	
         cd openwrt
         sed -i 's/-SNAPSHOT/.3/g' include/version.mk
-    - name: 05 - run script configure framework	
+    - name: 04 - run script configure framework	
       run: |	
         chmod 755 script.sh
         bash script.sh
-    - name: 06 - openwrt build dependencies	
+    - name: 05 - openwrt build dependencies	
       run: |	
         cd openwrt
         make defconfig
         make download -j4
-    - name: 07 - make openwrt source
+    - name: 06 - make openwrt source
       run: |	
         cd openwrt
         make -j2
-    - name: 08 - push to artifact file	
+    - name: 07 - push to artifact file	
       uses: actions/upload-artifact@v1	
       with:	
         name: k2p-framework	
