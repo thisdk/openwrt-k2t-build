@@ -37,4 +37,12 @@ cp ../config.k2p .config
 cp -r ../files ./
 chmod 755 ./files/etc/init.d/telecom_traffic
 
+# openwrt build dependencies
+
+make defconfig
+make download -j4
+
+# make openwrt source
+
+make -j2
 
