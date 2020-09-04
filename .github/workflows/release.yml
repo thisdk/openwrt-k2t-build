@@ -18,7 +18,7 @@ jobs:
         wget $URL
         tar -zxf v$VERSION.tar.gz
         mv openwrt-$VERSION openwrt
-    - name: 03 - run script configure framework	
+    - name: 03 - configure & build	
       run: |
         chmod 755 script.sh
         bash script.sh
