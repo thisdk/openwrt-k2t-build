@@ -17,7 +17,7 @@ jobs:
       run: |	
         cd openwrt
         sed -i 's/-SNAPSHOT/.3/g' include/version.mk
-    - name: 04 - run script configure framework	
+    - name: 04 - configure & build
       run: |	
         chmod 755 script.sh
         bash script.sh
