@@ -33,7 +33,7 @@ git clone https://github.com/thisdk/luci-app-smartdns.git package/luci-app-smart
 
 # copy build file and config
 
-cp ../config.k2p .config
+cp ../.config.k2p ./.config
 cp -r ../files ./
 chmod 755 ./files/etc/init.d/telecom_traffic
 
