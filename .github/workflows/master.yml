@@ -52,13 +52,13 @@ jobs:
       run: |	
         cd openwrt
         make defconfig
-        make download -j12
+        make download -j4
     - name: 08 - make openwrt source
       run: |	
         cd openwrt
-        make -j4
+        make -j2
     - name: 09 - push to artifact file	
       uses: actions/upload-artifact@v1	
       with:	
-        name: openwrt-k2p-build	
-        path: openwrt/bin/	
+        name: k2p-framework	
+        path: openwrt/bin/targets/ramips/mt7621/
