@@ -30,6 +30,7 @@ git clone https://github.com/thisdk/openwrt-speederv2.git package/udpspeederv2
 git clone https://github.com/thisdk/luci-app-speederv2.git package/luci-app-speederv2
 git clone https://github.com/thisdk/openwrt-smartdns.git package/smartdns
 git clone https://github.com/thisdk/luci-app-smartdns.git package/luci-app-smartdns
+git clone https://github.com/jerrykuku/luci-theme-argon.git package/luci-theme-argon
 
 # copy build file and config
 
