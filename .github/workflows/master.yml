@@ -16,7 +16,7 @@ jobs:
     - name: 03 - version replace	
       run: |	
         cd openwrt
-        sed -i 's/-SNAPSHOT/.3/g' include/version.mk
+        sed -i 's/-SNAPSHOT/.4/g' include/version.mk
     - name: 04 - configure & build
       run: |	
         chmod 755 script.sh
