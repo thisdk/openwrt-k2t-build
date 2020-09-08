@@ -6,8 +6,8 @@ jobs:
   release:
     runs-on: ubuntu-18.04
     env:
-      VERSION: 19.07.3
-      URL: https://github.com/openwrt/openwrt/archive/v19.07.3.tar.gz
+      VERSION: 19.07.4
+      URL: https://github.com/openwrt/openwrt/archive/v19.07.4.tar.gz
     steps:
     - name: 00 - clone repository
       uses: actions/checkout@v1
