@@ -22,7 +22,7 @@ git clone https://github.com/LGA1150/openwrt-fullconenat.git package/fullconenat
 git clone https://github.com/honwen/luci-app-aliddns.git package/luci-app-aliddns	
 git clone https://github.com/flytosky-f/openwrt-vlmcsd.git package/vlmcsd	
 git clone https://github.com/thisdk/openwrt-simple-obfs.git package/simple-obfs	
-git clone https://github.com/shadowsocks/openwrt-shadowsocks.git package/shadowsocks	
+git clone https://github.com/thisdk/openwrt-shadowsocks.git package/shadowsocks	
 git clone https://github.com/shadowsocks/luci-app-shadowsocks.git package/luci-app-shadowsocks	
 git clone https://github.com/thisdk/openwrt-udp2raw.git package/udp2raw
 git clone https://github.com/thisdk/luci-app-udp2raw.git package/luci-app-udp2raw
