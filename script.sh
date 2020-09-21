@@ -32,6 +32,7 @@ git clone https://github.com/thisdk/luci-app-speederv2.git package/luci-app-spee
 git clone https://github.com/thisdk/openwrt-smartdns.git package/smartdns
 git clone https://github.com/thisdk/luci-app-smartdns.git package/luci-app-smartdns
 git clone https://github.com/jerrykuku/luci-theme-argon.git package/luci-theme-argon
+git clone https://github.com/thisdk/k2p-wireless.git package/wireless
 
 # copy build file and config
 
