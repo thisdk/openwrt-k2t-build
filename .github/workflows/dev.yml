@@ -1,7 +1,7 @@
 name: OpenWrt K2P DEV CI
 on:
   schedule:
-    - cron:  '0 8 * * *'
+    - cron:  '0 10 * * *'
 jobs:
   master:	
     runs-on: ubuntu-20.04	
