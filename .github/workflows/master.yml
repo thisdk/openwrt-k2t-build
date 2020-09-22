@@ -19,5 +19,5 @@ jobs:
     - name: 05 - push to artifact file	
       uses: actions/upload-artifact@v1	
       with:	
-        name: k2p-framework	
+        name: k2p-master-framework
         path: openwrt/bin/targets/ramips/mt7621/

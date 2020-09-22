@@ -4,7 +4,7 @@ on:
     types: [created]
 jobs:
   release:
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-20.04
     env:
       VERSION: 19.07.4
       URL: https://github.com/openwrt/openwrt/archive/v19.07.4.tar.gz
@@ -19,13 +19,11 @@ jobs:
         tar -zxf v$VERSION.tar.gz
         mv openwrt-$VERSION openwrt
     - name: 03 - configure & build	
-      run: |
-        chmod 755 script.sh
-        bash script.sh
+      run: bash script.sh
     - name: 04 - push to artifact file
       uses: actions/upload-artifact@v1
       with:
-        name: openwrt-k2p-build
+        name: k2p-release-framework
         path: openwrt/bin/
     - name: 05 - delete packages files
       run: |

@@ -36,7 +36,6 @@ git clone https://github.com/jerrykuku/luci-theme-argon.git package/luci-theme-a
 
 cp ../.config.k2p ./.config
 cp -r ../files ./
-chmod 755 ./files/etc/init.d/telecom_traffic
 
 # openwrt build dependencies
 
