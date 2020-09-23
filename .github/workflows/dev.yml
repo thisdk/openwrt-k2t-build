@@ -17,9 +17,6 @@ jobs:
         cd openwrt
         ./scripts/feeds update -a
         ./scripts/feeds install -a
-        git clone https://github.com/jerrykuku/luci-theme-argon.git package/luci-theme-argon
-        git clone https://github.com/LGA1150/openwrt-fullconenat.git package/fullconenat
-        git clone https://github.com/smzhzy/openwrt_vlmcsd.git package/vlmcsd
         cp ../.config.dev .config
         cp -r ../files ./
         make defconfig
