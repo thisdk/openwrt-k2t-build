@@ -1,7 +1,7 @@
 name: OpenWrt K2P MASTER CI
 on:
-  watch:
-    types: started
+  schedule:
+    - cron:  '0 8 * * 4'
 jobs:
   master:	
     runs-on: ubuntu-20.04	
