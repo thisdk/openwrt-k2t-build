@@ -3,7 +3,7 @@ on:
   watch:
     types: started
 jobs:
-  master:	
+  dev:	
     runs-on: ubuntu-20.04	
     steps:	
     - name: 00 - clone repository	
