@@ -6,11 +6,11 @@ jobs:
   dev:	
     runs-on: ubuntu-20.04	
     steps:	
-    - name: 00 - clone repository	
+    - name: 01 - clone repository	
       uses: actions/checkout@v1	
-    - name: 01 - system build dependencies	
+    - name: 02 - system build dependencies	
       run: sudo apt-get install subversion build-essential libncurses5-dev zlib1g-dev gawk git ccache gettext libssl-dev xsltproc zip
-    - name: 02 - clone openwrt source
+    - name: 03 - clone openwrt source
       run: git clone https://git.openwrt.org/openwrt/openwrt.git
     - name: 04 - configure & build
       run: bash script_dev.sh
