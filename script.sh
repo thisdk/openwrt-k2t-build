@@ -33,9 +33,9 @@ cp -r ../files ./
 # openwrt build dependencies
 
 make defconfig
-make download -j4
+make download -j8
 
 # make openwrt source
 
-make -j2
+make -j4
 
