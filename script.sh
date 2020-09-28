@@ -23,12 +23,6 @@ git clone https://github.com/honwen/luci-app-aliddns.git package/luci-app-aliddn
 git clone https://github.com/smzhzy/openwrt_vlmcsd.git package/vlmcsd
 git clone https://github.com/shadowsocks/openwrt-shadowsocks.git package/shadowsocks	
 git clone https://github.com/shadowsocks/luci-app-shadowsocks.git package/luci-app-shadowsocks	
-git clone https://github.com/thisdk/openwrt-udp2raw.git package/udp2raw
-git clone https://github.com/thisdk/luci-app-udp2raw.git package/luci-app-udp2raw
-git clone https://github.com/thisdk/openwrt-speederv2.git package/udpspeederv2
-git clone https://github.com/thisdk/luci-app-speederv2.git package/luci-app-speederv2
-git clone https://github.com/thisdk/openwrt-smartdns.git package/smartdns
-git clone https://github.com/thisdk/luci-app-smartdns.git package/luci-app-smartdns
 git clone https://github.com/jerrykuku/luci-theme-argon.git package/luci-theme-argon
 
 # copy build file and config
