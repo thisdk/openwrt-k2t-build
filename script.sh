@@ -28,7 +28,6 @@ git clone https://github.com/jerrykuku/luci-theme-argon.git package/luci-theme-a
 # copy build file and config
 
 cp ../.config.k2p ./.config
-cp -r ../files ./
 
 # openwrt build dependencies
 
