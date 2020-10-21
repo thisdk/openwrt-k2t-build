@@ -10,7 +10,6 @@ cd openwrt
 # copy build file and config
 
 cp ../.config.dev .config
-cp -r ../files ./
 
 # openwrt build dependencies
 
