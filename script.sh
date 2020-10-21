@@ -23,7 +23,6 @@ git clone https://github.com/honwen/luci-app-aliddns.git package/luci-app-aliddn
 git clone https://github.com/smzhzy/openwrt_vlmcsd.git package/vlmcsd
 git clone https://github.com/shadowsocks/openwrt-shadowsocks.git package/shadowsocks	
 git clone https://github.com/shadowsocks/luci-app-shadowsocks.git package/luci-app-shadowsocks
-git clone https://github.com/honwen/openwrt-v2ray-plugin.git package/v2ray-plugin
 git clone https://github.com/jerrykuku/luci-theme-argon.git package/luci-theme-argon
 
 # copy build file and config
