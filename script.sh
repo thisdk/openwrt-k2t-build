@@ -2,6 +2,14 @@
 
 cd openwrt
 
+# version replace
+
+sed -i 's/-SNAPSHOT/.4/g' include/version.mk
+
+# conntrack max
+
+echo "net.netfilter.nf_conntrack_max=65536" >> ./package/base-files/files/etc/sysctl.conf
+
 # source update and install
 
 ./scripts/feeds update -a	
