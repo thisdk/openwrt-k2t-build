@@ -12,11 +12,9 @@ jobs:
       run: sudo apt-get install subversion build-essential libncurses5-dev zlib1g-dev gawk git ccache gettext libssl-dev xsltproc zip
     - name: 02 - clone openwrt source
       run: git clone -b openwrt-19.07 https://git.openwrt.org/openwrt/openwrt.git
-    - name: 03 - version replace	
-      run: cd openwrt && sed -i 's/-SNAPSHOT/.4/g' include/version.mk
-    - name: 04 - configure & build
+    - name: 03 - configure & build
       run: bash script.sh
-    - name: 05 - push to artifact file	
+    - name: 04 - push to artifact file	
       uses: actions/upload-artifact@v1	
       with:	
         name: k2p-master-framework
