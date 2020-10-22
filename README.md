@@ -1,5 +1,4 @@
 ## OpenWrt 自动构建
-[![](https://github.com/thisdk/openwrt-k2p-build/workflows/OpenWrt%20K2P%20RELEASE%20CI/badge.svg)](https://github.com/thisdk/openwrt-k2p-build/actions)
 [![](https://github.com/thisdk/openwrt-k2p-build/workflows/OpenWrt%20K2P%20MASTER%20CI/badge.svg)](https://github.com/thisdk/openwrt-k2p-build/actions)
 [![](https://github.com/thisdk/openwrt-k2p-build/workflows/OpenWrt%20K2P%20DEV%20CI/badge.svg)](https://github.com/thisdk/openwrt-k2p-build/actions)
 
