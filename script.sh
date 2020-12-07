@@ -4,7 +4,7 @@ cd openwrt
 
 # version replace
 
-sed -i 's/-SNAPSHOT/.4/g' include/version.mk
+sed -i 's/-SNAPSHOT/.5/g' include/version.mk
 
 # conntrack max
 
