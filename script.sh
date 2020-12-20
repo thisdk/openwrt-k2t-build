@@ -26,7 +26,7 @@ rm -rf package/feeds/packages/shadowsocks-libev
 
 # clone openwrt plugin source
 
-git clone https://github.com/thisdk/openwrt-fullconenat.git package/fullconenat	
+git clone https://github.com/LGA1150/openwrt-fullconenat.git package/fullconenat	
 git clone https://github.com/honwen/luci-app-aliddns.git package/luci-app-aliddns	
 git clone https://github.com/smzhzy/openwrt_vlmcsd.git package/vlmcsd
 git clone https://github.com/shadowsocks/openwrt-shadowsocks.git package/shadowsocks	
