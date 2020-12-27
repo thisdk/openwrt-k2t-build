@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-20.04	
     steps:	
     - name: 00 - clone repository	
-      uses: actions/checkout@v1	
+      uses: actions/checkout@v2
     - name: 01 - system build dependencies	
       run: sudo apt-get install subversion build-essential libncurses5-dev zlib1g-dev gawk git ccache gettext libssl-dev xsltproc zip
     - name: 02 - clone openwrt source
@@ -15,7 +15,7 @@ jobs:
     - name: 03 - configure & build
       run: bash script.sh
     - name: 04 - push to artifact file	
-      uses: actions/upload-artifact@v1	
+      uses: actions/upload-artifact@v2	
       with:	
         name: k2p-master-framework
         path: openwrt/bin/targets/ramips/mt7621/
