@@ -1,5 +1,9 @@
 #!/bin/bash
 
+# clone openwrt
+
+git clone -b openwrt-19.07 https://git.openwrt.org/openwrt/openwrt.git
+
 cd openwrt
 
 # version replace
