@@ -8,7 +8,7 @@ sed -i 's/-SNAPSHOT/.5/g' include/version.mk
 
 # conntrack max
 
-echo "net.netfilter.nf_conntrack_max=65536" >> ./package/base-files/files/etc/sysctl.conf
+echo "net.netfilter.nf_conntrack_max=32768" >> ./package/base-files/files/etc/sysctl.conf
 
 # source update and install
 
