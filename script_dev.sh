@@ -6,6 +6,10 @@ git clone -b openwrt-21.02 https://git.openwrt.org/openwrt/openwrt.git
 
 cd openwrt
 
+# version replace
+
+sed -i 's/-SNAPSHOT/.1/g' include/version.mk
+
 # source update and install
 
 ./scripts/feeds update -a	
