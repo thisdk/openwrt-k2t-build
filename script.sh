@@ -22,6 +22,7 @@ echo "net.netfilter.nf_conntrack_max=32768" >> ./package/base-files/files/etc/sy
 git clone https://github.com/honwen/luci-app-aliddns.git package/luci-app-aliddns
 git clone https://github.com/jerrykuku/luci-theme-argon.git package/luci-theme-argon
 git clone https://github.com/gw826943555/openwrt-vlmcsd.git package/openwrt-vlmcsd
+git clone https://github.com/thisdk/openwrt-k2p-package.git package/openwrt-k2p-package
 
 # copy build file and config
 
