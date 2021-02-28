@@ -14,7 +14,7 @@ echo "net.netfilter.nf_conntrack_max=32768" >> ./package/base-files/files/etc/sy
 
 # source update and install
 
-./scripts/feeds update -a	&& ./scripts/feeds install -a
+./scripts/feeds update -a && ./scripts/feeds install -a
 
 
 # clone openwrt plugin source
