@@ -20,7 +20,6 @@ sed -i 's/-SNAPSHOT/.1/g' include/version.mk
 git clone https://github.com/honwen/luci-app-aliddns.git package/luci-app-aliddns
 git clone https://github.com/jerrykuku/luci-theme-argon.git package/luci-theme-argon
 git clone https://github.com/gw826943555/openwrt-vlmcsd.git package/openwrt-vlmcsd
-git clone https://github.com/honwen/openwrt-dnsmasq-extra.git package/openwrt-dnsmasq-extra
 
 # copy build file and config
 
