@@ -4,6 +4,8 @@
 
 git clone -b openwrt-19.07 https://git.openwrt.org/openwrt/openwrt.git
 
+git clone https://github.com/coolsnowwolf/lede.git
+
 # version replace
 
 cd openwrt && sed -i 's/-SNAPSHOT/.7/g' include/version.mk
@@ -19,6 +21,7 @@ echo "net.netfilter.nf_conntrack_max=32768" >> ./package/base-files/files/etc/sy
 
 # clone openwrt plugin source
 
+mv ../lede/package/lean/mt/ package/mt
 git clone https://github.com/honwen/luci-app-aliddns.git package/luci-app-aliddns
 git clone https://github.com/jerrykuku/luci-theme-argon.git package/luci-theme-argon
 git clone https://github.com/gw826943555/openwrt-vlmcsd.git package/openwrt-vlmcsd
