@@ -20,7 +20,7 @@ git clone https://github.com/gw826943555/openwrt-vlmcsd.git package/openwrt-vlmc
 
 # copy build file and config
 
-cp ../.config.dev .config
+cp ../.config .config
 
 # openwrt build dependencies
 
