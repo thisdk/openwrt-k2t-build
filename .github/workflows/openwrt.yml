@@ -1,4 +1,4 @@
-name: OpenWrt K2P DEV CI
+name: OpenWrt K2P CI
 on:
   watch:
     types: started
@@ -11,9 +11,9 @@ jobs:
     - name: 02 - system build dependencies	
       run: sudo apt-get install subversion build-essential libncurses5-dev zlib1g-dev gawk git ccache gettext libssl-dev xsltproc zip
     - name: 03 - configure & build
-      run: bash script_dev.sh
+      run: bash script.sh
     - name: 04 - push to artifact file	
       uses: actions/upload-artifact@v2	
       with:	
-        name: k2p-dev-framework
+        name: k2p-framework
         path: openwrt/bin/targets/ramips/mt7621/
