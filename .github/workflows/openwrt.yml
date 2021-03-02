@@ -3,7 +3,7 @@ on:
   watch:
     types: started
 jobs:
-  dev:	
+  openwrt:	
     runs-on: ubuntu-20.04	
     steps:	
     - name: 01 - clone repository	
