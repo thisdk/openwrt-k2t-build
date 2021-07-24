@@ -2,7 +2,7 @@
 
 # clone openwrt
 
-git clone -b openwrt-21.02 https://git.openwrt.org/openwrt/openwrt.git
+git clone -b openwrt-21.02 https://git.openwrt.org/openwrt/openwrt.git && cd openwrt
 
 # source update and install
 
