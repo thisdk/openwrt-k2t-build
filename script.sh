@@ -23,9 +23,9 @@ cp ../.config .config
 
 # openwrt build dependencies
 
-make defconfig
+make defconfig && make download -j8
 
 # make openwrt source
 
-make -j8
+make -j4
 
