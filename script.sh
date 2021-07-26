@@ -2,7 +2,11 @@
 
 # clone openwrt
 
-git clone -b openwrt-21.02 https://git.openwrt.org/openwrt/openwrt.git && cd openwrt
+git clone -b openwrt-21.02 https://git.openwrt.org/openwrt/openwrt.git
+
+# version replace
+
+cd openwrt && sed -i 's/-SNAPSHOT/.1/g' include/version.mk
 
 # source update and install
 
@@ -14,9 +18,9 @@ cp ../.config .config
 
 # openwrt build dependencies
 
-make defconfig && make download -j8
+make defconfig
 
 # make openwrt source
 
-make -j4
+make -j8
 
