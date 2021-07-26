@@ -1,4 +1,4 @@
-name: OpenWrt K2P CI
+name: OpenWrt K2T CI
 on:
   watch:
     types: started
