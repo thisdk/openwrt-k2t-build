@@ -1,7 +1,7 @@
 name: OpenWrt K2T CI
 on:
-  watch:
-    types: started
+  schedule:
+    - cron:  '0 10 * * *'
 jobs:
   openwrt:	
     runs-on: ubuntu-20.04	
