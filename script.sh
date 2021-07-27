@@ -14,7 +14,6 @@ cd openwrt && sed -i 's/-SNAPSHOT/.1/g' include/version.mk
 
 # clone openwrt plugin source
 
-git clone https://github.com/jerrykuku/luci-theme-argon.git package/luci-theme-argon
 git clone https://github.com/gw826943555/openwrt-vlmcsd.git package/openwrt-vlmcsd
 
 # copy build file and config
